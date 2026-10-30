@@ -1,6 +1,6 @@
 /* Offline cache: page works with no signal after the first visit. Bump V when you edit the site. */
-var V="relyns-v3";
-var FILES=["./","index.html","img/logo.svg","img/ankara-kimono.webp","img/batik-trousers.webp","img/beaded-lace.webp","img/bubu-ruffle.webp","img/casual-two-piece.webp","img/corset-dress.webp","img/corset-top.webp","img/embroidery-bubu.webp","img/peplum-skirt.webp","img/sl-print.webp","img/g/01-t.webp","img/g/02-t.webp","img/g/03-t.webp","img/g/04-t.webp","img/g/05-t.webp","img/g/06-t.webp","img/g/07-t.webp","img/g/08-t.webp"];
+var V="relyns-v4";
+var FILES=["./","index.html","img/logo.svg","img/ankara-kimono.webp","img/batik-trousers.webp","img/beaded-lace.webp","img/bubu-ruffle.webp","img/casual-two-piece.webp","img/corset-dress.webp","img/corset-top.webp","img/embroidery-bubu.webp","img/peplum-skirt.webp","img/sl-print.webp","img/g/01-t.webp","img/g/02-t.webp","img/g/03-t.webp","img/g/04-t.webp","img/g/05-t.webp"];
 self.addEventListener("install",function(e){e.waitUntil(caches.open(V).then(function(c){return c.addAll(FILES)}).then(function(){return self.skipWaiting()}))});
 self.addEventListener("activate",function(e){e.waitUntil(caches.keys().then(function(k){return Promise.all(k.filter(function(n){return n!==V}).map(function(n){return caches.delete(n)}))}).then(function(){return self.clients.claim()}))});
 self.addEventListener("fetch",function(e){
