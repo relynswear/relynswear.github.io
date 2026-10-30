@@ -23,7 +23,7 @@
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="preload" as="image" href="img/sl-print.webp" fetchpriority="high">
 <!-- EDIT: structured data for Google Search and Maps -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"ClothingStore","name":"Relyn’s Wear","slogan":"Elegance on a budget","image":"https://jamesyambasu743-dev.github.io/relyns-wear/img/sl-print.webp","url":"https://jamesyambasu743-dev.github.io/relyns-wear/","telephone":"+23278452324","priceRange":"Le 120 to Le 500+","currenciesAccepted":"SLE","paymentAccepted":"Cash, Orange Money","address":{"@type":"PostalAddress","streetAddress":"17 Macueley Street, Fonima, Femiturner","addressLocality":"Goderich, Freetown","addressCountry":"SL"},"geo":{"@type":"GeoCoordinates","latitude":8.431789,"longitude":-13.270315},"hasMap":"https://www.google.com/maps/search/?api=1&query=8.431789,-13.270315","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Wednesday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Tuesday","opens":"09:00","closes":"17:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Thursday","opens":"09:00","closes":"16:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"12:00","closes":"16:00"}],"sameAs":["https://instagram.com/relynswear"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ClothingStore","name":"Relyn’s Wear","slogan":"Elegance on a budget","image":"https://jamesyambasu743-dev.github.io/relyns-wear/img/sl-print.webp","url":"https://jamesyambasu743-dev.github.io/relyns-wear/","email":"jerelyndumbuya5@gmail.com","telephone":"+23278452324","priceRange":"Le 120 to Le 500+","currenciesAccepted":"SLE","paymentAccepted":"Cash, Orange Money","address":{"@type":"PostalAddress","streetAddress":"17 Macueley Street, Fonima, Femiturner","addressLocality":"Goderich, Freetown","addressCountry":"SL"},"geo":{"@type":"GeoCoordinates","latitude":8.431789,"longitude":-13.270315},"hasMap":"https://www.google.com/maps/search/?api=1&query=8.431789,-13.270315","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Wednesday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Tuesday","opens":"09:00","closes":"17:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Thursday","opens":"09:00","closes":"16:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"12:00","closes":"16:00"}],"sameAs":["https://www.instagram.com/relynswear/","https://www.facebook.com/share/1DCDP3X3k6/"]}</script>
 <style>
 :root{
   --bg:#0d0712;--bg2:#160b1f;--card:#1b1026;--line:#3a2550;
@@ -175,8 +175,32 @@ dialog h3{margin:0;font-size:1.25rem}
 dialog p{margin:4px 0 12px;color:var(--mute)}
 .x{position:absolute;top:10px;right:10px;width:44px;height:44px;border-radius:50%;border:0;background:rgba(0,0,0,.7);color:#fff;font-size:1.6rem;line-height:1;cursor:pointer}
 
+
+/* clear "tap to enlarge" badge on every photo */
+.zoom{position:relative}
+.zoom::after{content:"";position:absolute;right:8px;bottom:8px;width:36px;height:36px;border-radius:50%;
+  background:rgba(13,7,18,.78) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f1dca6' stroke-width='2.4' stroke-linecap='round'%3E%3Ccircle cx='10.5' cy='10.5' r='6'/%3E%3Cpath d='M15 15l5 5M10.5 8v5M8 10.5h5'/%3E%3C/svg%3E") center/20px no-repeat;
+  border:1.5px solid rgba(241,220,166,.7)}
+.hint{display:flex;align-items:center;gap:8px;margin:0 0 14px;color:var(--lilac);font-weight:600;font-size:.95rem}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;list-style:none;padding:0;margin:0}
+.gal button{all:unset;position:relative;display:block;cursor:zoom-in;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:#241632}
+.gal button:focus-visible{outline:3px solid var(--gold2);outline-offset:2px}
+.gal img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.gal .n{position:absolute;left:6px;top:6px;padding:1px 8px;border-radius:999px;background:rgba(13,7,18,.8);color:var(--gold2);font-size:.75rem;font-weight:800}
+.gal .zoom::after{width:30px;height:30px;right:6px;bottom:6px;background-size:16px}
+dialog .stage{position:relative;background:#000}
+dialog .stage img{aspect-ratio:auto;max-height:66vh;width:100%;object-fit:contain;touch-action:pan-y}
+.nav{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;border:0;background:rgba(0,0,0,.65);color:#fff;font-size:1.6rem;line-height:1;cursor:pointer}
+.nav.p{left:8px}.nav.n2{right:8px}
+.count{position:absolute;left:10px;top:12px;padding:2px 10px;border-radius:999px;background:rgba(0,0,0,.7);font-size:.85rem;font-weight:700}
+.social{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:14px 0}
+.social a{display:flex;flex-direction:column;align-items:center;gap:4px;padding:12px 6px;border-radius:14px;background:var(--card);border:1px solid var(--line);text-decoration:none;font-weight:700;font-size:.85rem;color:#fff;min-height:64px}
+.social svg{width:24px;height:24px;fill:var(--gold2)}
+.email{word-break:break-all}
+
 @media (min-width:600px){
   .grid{grid-template-columns:1fr 1fr 1fr}
+  .gal{grid-template-columns:repeat(4,1fr)}
   .fan{height:300px}
 }
 </style>
@@ -209,7 +233,7 @@ dialog p{margin:4px 0 12px;color:var(--mute)}
     <div class="fan">
       <img class="f1" src="img/embroidery-bubu.webp" width="320" height="320" alt="Lavender bubu with red flower embroidery" decoding="async">
       <img class="f2" src="img/sl-print.webp" width="320" height="320" alt="Yellow and magenta SL print two-piece outfits on mannequins" fetchpriority="high">
-      <img class="f3" src="img/mermaid-corset.webp" width="320" height="320" alt="Green and teal corset mermaid dress" decoding="async">
+      <img class="f3" src="img/corset-dress.webp" width="320" height="320" alt="Blue star print corset dress with black lace sleeves" decoding="async">
       <a class="seal" data-wa data-msg="book" href="https://wa.me/23278452324?text=Hello%20Relyn%E2%80%99s%20Wear%2C%20I%20want%20to%20book%20a%20design." data-kri="Buk wi <b>tide!</b>">Book us <b>today!</b></a>
     </div>
 
@@ -234,70 +258,89 @@ dialog p{margin:4px 0 12px;color:var(--mute)}
     <h2 id="h-sew" data-kri="Wetin wi de <em>mek</em>">What we <em>sew</em></h2>
     <span class="h2k" lang="kri" data-kri="What we sew" data-flip>Wetin wi de mek</span>
 
+    <p class="hint" data-kri="🔍 Tap eni foto fɔ si am big">🔍 Tap any photo to see it bigger</p>
     <!-- EDIT: products. Copy one <li class="item"> block per product. data-item is the name sent in the WhatsApp order. -->
     <ul class="grid">
       <li class="item">
-        <button class="ph" type="button" aria-label="See bigger photo: SL traditional print"><img src="img/sl-print.webp" width="320" height="320" alt="Yellow and magenta SL print two-piece outfits on mannequins" loading="lazy" decoding="async"></button>
+        <button class="ph zoom" type="button" aria-label="See bigger photo: SL traditional print"><img src="img/sl-print.webp" width="320" height="320" alt="Yellow and magenta SL print two-piece outfits on mannequins" loading="lazy" decoding="async"></button>
         <div class="bd"><h3>SL traditional print</h3><p data-kri="Tu-pis print stayl">Two-piece print styles</p>
           <div class="ft"><p class="price"><small data-kri="Frɔm">From</small>Le 500</p>
           <a class="order" data-wa data-item="SL traditional print" href="https://wa.me/23278452324?text=Hello%20Relyn%E2%80%99s%20Wear%2C%20I%20would%20like%20to%20order%3A%20SL%20traditional%20print"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><use href="#ic-wa"/></svg><span data-kri="Oda">Order</span></a></div></div>
       </li>
       <li class="item">
-        <button class="ph" type="button" aria-label="See bigger photo: Corset top"><img src="img/corset-top.webp" width="320" height="320" alt="Corset top in colourful Ankara print with puff sleeves" loading="lazy" decoding="async"></button>
+        <button class="ph zoom" type="button" aria-label="See bigger photo: Corset top"><img src="img/corset-top.webp" width="320" height="320" alt="Corset top in colourful Ankara print with puff sleeves" loading="lazy" decoding="async"></button>
         <div class="bd"><h3>Corset top (blouse)</h3><p data-kri="Ankara wit pɔf slip">Ankara with puff sleeves</p>
           <div class="ft"><p class="price"><small data-kri="Pris">Price</small>Le 250</p>
           <a class="order" data-wa data-item="Corset top (blouse)" href="https://wa.me/23278452324?text=Hello%20Relyn%E2%80%99s%20Wear%2C%20I%20would%20like%20to%20order%3A%20Corset%20top"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><use href="#ic-wa"/></svg><span data-kri="Oda">Order</span></a></div></div>
       </li>
       <li class="item">
-        <button class="ph" type="button" aria-label="See bigger photo: Ankara kimono"><img src="img/ankara-kimono.webp" width="320" height="320" alt="Black and white patterned Ankara kimono outfit" loading="lazy" decoding="async"></button>
+        <button class="ph zoom" type="button" aria-label="See bigger photo: Ankara kimono"><img src="img/ankara-kimono.webp" width="320" height="320" alt="Black and white patterned Ankara kimono outfit" loading="lazy" decoding="async"></button>
         <div class="bd"><h3>Ankara kimono</h3><p data-kri="Plen ɔ print Afrikana">Plain or print Africana</p>
           <div class="ft"><p class="price"><small data-kri="Pris">Price</small>Le 120 to Le 250</p>
           <a class="order" data-wa data-item="Ankara kimono" href="https://wa.me/23278452324?text=Hello%20Relyn%E2%80%99s%20Wear%2C%20I%20would%20like%20to%20order%3A%20Ankara%20kimono"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><use href="#ic-wa"/></svg><span data-kri="Oda">Order</span></a></div></div>
       </li>
       <li class="item">
-        <button class="ph" type="button" aria-label="See bigger photo: Embroidered bubu"><img src="img/embroidery-bubu.webp" width="320" height="320" alt="Lavender bubu with red flower embroidery" loading="lazy" decoding="async"></button>
+        <button class="ph zoom" type="button" aria-label="See bigger photo: Embroidered bubu"><img src="img/embroidery-bubu.webp" width="320" height="320" alt="Lavender bubu with red flower embroidery" loading="lazy" decoding="async"></button>
         <div class="bd"><h3>Embroidered bubu</h3><p data-kri="Ambrɔydri wit an">Hand embroidery</p>
           <div class="ft"><p class="price ask" data-kri="Ɔmɔs? Aks wi">Price on request</p>
           <a class="order" data-wa data-item="Embroidered bubu" href="https://wa.me/23278452324?text=Hello%20Relyn%E2%80%99s%20Wear%2C%20I%20would%20like%20to%20order%3A%20Embroidered%20bubu"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><use href="#ic-wa"/></svg><span data-kri="Aks di pris">Ask price</span></a></div></div>
       </li>
       <li class="item">
-        <button class="ph" type="button" aria-label="See bigger photo: Beaded lace gowns"><img src="img/beaded-lace.webp" width="320" height="320" alt="Pink beaded lace gowns with ruffles on mannequins" loading="lazy" decoding="async"></button>
+        <button class="ph zoom" type="button" aria-label="See bigger photo: Beaded lace gowns"><img src="img/beaded-lace.webp" width="320" height="320" alt="Pink beaded lace gowns with ruffles on mannequins" loading="lazy" decoding="async"></button>
         <div class="bd"><h3>Beaded lace gowns</h3><p data-kri="Fɔ ingejmɛnt ɛn big de">For engagements and big days</p>
           <div class="ft"><p class="price ask" data-kri="Ɔmɔs? Aks wi">Price on request</p>
           <a class="order" data-wa data-item="Beaded lace gown" href="https://wa.me/23278452324?text=Hello%20Relyn%E2%80%99s%20Wear%2C%20I%20would%20like%20to%20order%3A%20Beaded%20lace%20gown"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><use href="#ic-wa"/></svg><span data-kri="Aks di pris">Ask price</span></a></div></div>
       </li>
       <li class="item">
-        <button class="ph" type="button" aria-label="See bigger photo: Corset mermaid dress"><img src="img/mermaid-corset.webp" width="320" height="320" alt="Green and teal corset mermaid dress" loading="lazy" decoding="async"></button>
-        <div class="bd"><h3>Corset mermaid dress</h3><p data-kri="Kɔsɛt ɛn bɔstiay">Corset and bustier styles</p>
+        <button class="ph zoom" type="button" aria-label="See bigger photo: Corset dress"><img src="img/corset-dress.webp" width="320" height="320" alt="Blue star print corset dress with black lace sleeves" loading="lazy" decoding="async"></button>
+        <div class="bd"><h3>Corset dress</h3><p data-kri="Kɔsɛt ɛn bɔstiay">Corset and bustier styles</p>
           <div class="ft"><p class="price ask" data-kri="Ɔmɔs? Aks wi">Price on request</p>
-          <a class="order" data-wa data-item="Corset mermaid dress" href="https://wa.me/23278452324?text=Hello%20Relyn%E2%80%99s%20Wear%2C%20I%20would%20like%20to%20order%3A%20Corset%20mermaid%20dress"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><use href="#ic-wa"/></svg><span data-kri="Aks di pris">Ask price</span></a></div></div>
+          <a class="order" data-wa data-item="Corset dress" href="https://wa.me/23278452324?text=Hello%20Relyn%E2%80%99s%20Wear%2C%20I%20would%20like%20to%20order%3A%20Corset%20dress"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><use href="#ic-wa"/></svg><span data-kri="Aks di pris">Ask price</span></a></div></div>
       </li>
       <li class="item">
-        <button class="ph" type="button" aria-label="See bigger photo: Ankara peplum and skirt"><img src="img/peplum-skirt.webp" width="320" height="320" alt="Purple Ankara peplum top with matching pencil skirt" loading="lazy" decoding="async"></button>
+        <button class="ph zoom" type="button" aria-label="See bigger photo: Ankara peplum and skirt"><img src="img/peplum-skirt.webp" width="320" height="320" alt="Purple Ankara peplum top with matching pencil skirt" loading="lazy" decoding="async"></button>
         <div class="bd"><h3>Peplum top and skirt</h3><p data-kri="Ankara blawz ɛn skɛt">Ankara blouse and pencil skirt</p>
           <div class="ft"><p class="price ask" data-kri="Ɔmɔs? Aks wi">Price on request</p>
           <a class="order" data-wa data-item="Peplum top and skirt" href="https://wa.me/23278452324?text=Hello%20Relyn%E2%80%99s%20Wear%2C%20I%20would%20like%20to%20order%3A%20Peplum%20top%20and%20skirt"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><use href="#ic-wa"/></svg><span data-kri="Aks di pris">Ask price</span></a></div></div>
       </li>
       <li class="item">
-        <button class="ph" type="button" aria-label="See bigger photo: Skirts and trousers"><img src="img/satin-skirt.webp" width="320" height="320" alt="Black satin A-line skirt" loading="lazy" decoding="async"></button>
-        <div class="bd"><h3>Skirts and trousers</h3><p data-kri="Ɔl kayn, lɛk dis satin skɛt">All kinds, like this satin A-line</p>
+        <button class="ph zoom" type="button" aria-label="See bigger photo: Skirts and trousers"><img src="img/batik-trousers.webp" width="320" height="320" alt="Orange and cream batik print trousers" loading="lazy" decoding="async"></button>
+        <div class="bd"><h3>Skirts and trousers</h3><p data-kri="Ɔl kayn, lɛk dis batik trɔsis">All kinds, like these batik trousers</p>
           <div class="ft"><p class="price ask" data-kri="Ɔmɔs? Aks wi">Price on request</p>
           <a class="order" data-wa data-item="Skirts and trousers" href="https://wa.me/23278452324?text=Hello%20Relyn%E2%80%99s%20Wear%2C%20I%20would%20like%20to%20order%3A%20Skirts%20and%20trousers"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><use href="#ic-wa"/></svg><span data-kri="Aks di pris">Ask price</span></a></div></div>
       </li>
       <li class="item">
-        <button class="ph" type="button" aria-label="See bigger photo: Bubu and Mariama Kebha"><img src="img/bubu-ruffle.webp" width="320" height="320" alt="Cream bubu gown with red ruffle trim" loading="lazy" decoding="async"></button>
+        <button class="ph zoom" type="button" aria-label="See bigger photo: Bubu and Mariama Kebha"><img src="img/bubu-ruffle.webp" width="320" height="320" alt="Cream bubu gown with red ruffle trim" loading="lazy" decoding="async"></button>
         <div class="bd"><h3>Bubu and Mariama Kebha</h3><p data-kri="Bubu gawn ɛn shɔt">Bubu gowns and shirts</p>
           <div class="ft"><p class="price ask" data-kri="Ɔmɔs? Aks wi">Price on request</p>
           <a class="order" data-wa data-item="Bubu and Mariama Kebha" href="https://wa.me/23278452324?text=Hello%20Relyn%E2%80%99s%20Wear%2C%20I%20would%20like%20to%20order%3A%20Bubu%20and%20Mariama%20Kebha"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><use href="#ic-wa"/></svg><span data-kri="Aks di pris">Ask price</span></a></div></div>
       </li>
       <li class="item">
-        <button class="ph" type="button" aria-label="See bigger photo: Two-piece casuals"><img src="img/casual-two-piece.webp" width="320" height="320" alt="Red patterned two-piece trouser casual outfit" loading="lazy" decoding="async"></button>
+        <button class="ph zoom" type="button" aria-label="See bigger photo: Two-piece casuals"><img src="img/casual-two-piece.webp" width="320" height="320" alt="Red patterned two-piece trouser casual outfit" loading="lazy" decoding="async"></button>
         <div class="bd"><h3>Two-piece casuals</h3><p data-kri="Trɔsis ɛn tɔp">Trousers and top sets</p>
           <div class="ft"><p class="price ask" data-kri="Ɔmɔs? Aks wi">Price on request</p>
           <a class="order" data-wa data-item="Two-piece casual" href="https://wa.me/23278452324?text=Hello%20Relyn%E2%80%99s%20Wear%2C%20I%20would%20like%20to%20order%3A%20Two-piece%20casual"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><use href="#ic-wa"/></svg><span data-kri="Aks di pris">Ask price</span></a></div></div>
       </li>
     </ul>
     <p class="note" data-kri="Ɔl di pris dɛn na Nyu Liɔn (SLE). Di pris kin chenj bay di stayl ɛn di klos. Tap foto fɔ si am big.">All prices in new Leones (SLE). Final price depends on your style and fabric. Tap a photo to see it bigger.</p>
+  </section>
+
+  <section id="gallery" aria-labelledby="h-gal">
+    <h2 id="h-gal" data-kri="Mɔ <em>stayl</em> dɛn">More <em>styles</em></h2>
+    <span class="h2k" lang="kri" data-kri="More styles" data-flip>Mɔ stayl dɛn</span>
+    <p class="hint" data-kri="🔍 Tap eni foto fɔ si am ful. Swayp fɔ si di nɛks wan.">🔍 Tap any photo to see it full size. Swipe for the next one.</p>
+    <!-- EDIT: gallery. Thumbnail img/g/NN-t.webp (210x280), full size img/g/NN.webp. -->
+    <ul class="gal">
+      <li><button class="zoom" type="button" data-full="img/g/01.webp" aria-label="Open style 1 of 8: Blue star print corset dress with black lace sleeves and flared cuffs"><img src="img/g/01-t.webp" width="210" height="280" alt="Blue star print corset dress with black lace sleeves and flared cuffs" loading="lazy" decoding="async"><span class="n" aria-hidden="true">#1</span></button></li>
+      <li><button class="zoom" type="button" data-full="img/g/02.webp" aria-label="Open style 2 of 8: Purple and gold batik print peplum dress with a front slit"><img src="img/g/02-t.webp" width="210" height="280" alt="Purple and gold batik print peplum dress with a front slit" loading="lazy" decoding="async"><span class="n" aria-hidden="true">#2</span></button></li>
+      <li><button class="zoom" type="button" data-full="img/g/03.webp" aria-label="Open style 3 of 8: Grey and yellow print peplum skirt suit with black lace trim"><img src="img/g/03-t.webp" width="210" height="280" alt="Grey and yellow print peplum skirt suit with black lace trim" loading="lazy" decoding="async"><span class="n" aria-hidden="true">#3</span></button></li>
+      <li><button class="zoom" type="button" data-full="img/g/04.webp" aria-label="Open style 4 of 8: Green Ankara puff-sleeve gown with white lace collar and belt"><img src="img/g/04-t.webp" width="210" height="280" alt="Green Ankara puff-sleeve gown with white lace collar and belt" loading="lazy" decoding="async"><span class="n" aria-hidden="true">#4</span></button></li>
+      <li><button class="zoom" type="button" data-full="img/g/05.webp" aria-label="Open style 5 of 8: Paisley print peplum top and flared maxi skirt"><img src="img/g/05-t.webp" width="210" height="280" alt="Paisley print peplum top and flared maxi skirt" loading="lazy" decoding="async"><span class="n" aria-hidden="true">#5</span></button></li>
+      <li><button class="zoom" type="button" data-full="img/g/06.webp" aria-label="Open style 6 of 8: Multicolour square print flared maxi skirt"><img src="img/g/06-t.webp" width="210" height="280" alt="Multicolour square print flared maxi skirt" loading="lazy" decoding="async"><span class="n" aria-hidden="true">#6</span></button></li>
+      <li><button class="zoom" type="button" data-full="img/g/07.webp" aria-label="Open style 7 of 8: Rust and navy leaf print wide-leg trousers"><img src="img/g/07-t.webp" width="210" height="280" alt="Rust and navy leaf print wide-leg trousers" loading="lazy" decoding="async"><span class="n" aria-hidden="true">#7</span></button></li>
+      <li><button class="zoom" type="button" data-full="img/g/08.webp" aria-label="Open style 8 of 8: Orange and cream batik print trousers with elastic waist"><img src="img/g/08-t.webp" width="210" height="280" alt="Orange and cream batik print trousers with elastic waist" loading="lazy" decoding="async"><span class="n" aria-hidden="true">#8</span></button></li>
+    </ul>
+    <p class="note" data-kri="Yu lɛk wan? Tap am, dɔn tap “Oda” fɔ sɛn wi di stayl nɔmba pan WhatsApp.">Like one? Open it and tap “Order this style” to send us its number on WhatsApp.</p>
   </section>
 
   <section aria-labelledby="h-how">
@@ -341,6 +384,12 @@ dialog p{margin:4px 0 12px;color:var(--mute)}
       </div>
       <p class="addr"><b>17 Macueley Street, Fonima, Femiturner, Goderich</b><br><span data-kri="Plɔs kod">Plus Code</span>: CPJH+PV Freetown</p>
       <p class="tip" data-kri="Tɛl yu okada ɔ keke draiva: <b>“Zion Academy, Gɔdrich.”</b> If yu lɔs, kɔl wi ɔ WhatsApp wi, wi go gayd yu.">Tell your okada or keke rider: <b>“Zion Academy, Goderich.”</b> Lost? Call or WhatsApp us and we will guide you in.</p>
+      <div class="social">
+        <a href="https://www.instagram.com/relynswear/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-ig"/></svg>Instagram</a>
+        <a href="https://www.facebook.com/share/1DCDP3X3k6/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-fb"/></svg>Facebook</a>
+        <a href="mailto:jerelyndumbuya5@gmail.com?subject=Order%20from%20your%20website"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-mail"/></svg><span data-kri="Imel">Email</span></a>
+      </div>
+      <p class="addr email"><span data-kri="Imel">Email</span>: <a href="mailto:jerelyndumbuya5@gmail.com">jerelyndumbuya5@gmail.com</a> · Instagram: <a href="https://www.instagram.com/relynswear/" target="_blank" rel="noopener">@relynswear</a></p>
       <div class="row2">
         <a class="btn call" href="https://www.google.com/maps/dir/?api=1&amp;destination=8.431789,-13.270315" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-pin"/></svg><span data-kri="Si di rod">Directions</span></a>
         <a class="btn ghost" data-wa data-msg="loc" href="https://wa.me/23278452324?text=Hello%20Relyn%E2%80%99s%20Wear%2C%20please%20guide%20me%20to%20your%20shop."><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-wa"/></svg><span data-kri="Gayd mi">Guide me</span></a>
@@ -375,13 +424,13 @@ dialog p{margin:4px 0 12px;color:var(--mute)}
     <p data-kri="Sheb dis pej pan WhatsApp, ɔ sev wi nɔmba na yu fon.">Share this page on WhatsApp, or save our number to your phone.</p>
     <div class="row2">
       <button class="btn wa" type="button" id="share"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-share"/></svg><span data-kri="Sheb">Share</span></button>
-      <a class="btn call" id="vcf" download="Relyns-Wear.vcf" href="data:text/vcard;charset=utf-8,BEGIN%3AVCARD%0AVERSION%3A3.0%0AFN%3ARelyn%E2%80%99s%20Wear%20(Tailor)%0ATEL%3BTYPE%3DCELL%3A%2B23278452324%0AADR%3A%3B%3B17%20Macueley%20Street%2C%20near%20Zion%20Academy%3BGoderich%3B%3B%3BSierra%20Leone%0AEND%3AVCARD"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-save"/></svg><span data-kri="Sev nɔmba">Save number</span></a>
+      <a class="btn call" id="vcf" download="Relyns-Wear.vcf" href="data:text/vcard;charset=utf-8,BEGIN%3AVCARD%0AVERSION%3A3.0%0AFN%3ARelyn%E2%80%99s%20Wear%20(Tailor)%0ATEL%3BTYPE%3DCELL%3A%2B23278452324%0AADR%3A%3B%3B17%20Macueley%20Street%2C%20near%20Zion%20Academy%3BGoderich%3B%3B%3BSierra%20Leone%0AEMAIL%3Ajerelyndumbuya5%40gmail.com%0AURL%3Ahttps%3A%2F%2Fjamesyambasu743-dev.github.io%2Frelyns-wear%2F%0AEND%3AVCARD"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-save"/></svg><span data-kri="Sev nɔmba">Save number</span></a>
     </div>
   </section>
 
   <footer>
     <p class="bye" lang="kri">Tɛnki fɔ kam. Kam bak igen!</p>
-    <p>Relyn’s Wear, Goderich, Sierra Leone. <a href="https://instagram.com/relynswear" target="_blank" rel="noopener">Instagram @relynswear</a> · Facebook: Relyn’s Wear</p>
+    <p>Relyn’s Wear, Goderich, Sierra Leone. <a href="https://www.instagram.com/relynswear/" target="_blank" rel="noopener">Instagram @relynswear</a> · <a href="https://www.facebook.com/share/1DCDP3X3k6/" target="_blank" rel="noopener">Facebook</a> · <a href="mailto:jerelyndumbuya5@gmail.com">jerelyndumbuya5@gmail.com</a></p>
     <p data-kri="Foto dɛn frɔm Relyn’s Wear in katalog. Nɔ wɛb font, nɔ trakas.">Photos from the Relyn’s Wear catalogue. Icons drawn for this page. No web fonts, no trackers.</p>
   </footer>
 </main>
@@ -389,13 +438,16 @@ dialog p{margin:4px 0 12px;color:var(--mute)}
 <nav class="bar" id="bar" aria-label="Quick contact">
   <a class="btn call" href="tel:+23278452324"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-call"/></svg><span data-kri="Kɔl">Call</span></a>
   <a class="btn wa" data-wa href="https://wa.me/23278452324?text=Hello%20Relyn%E2%80%99s%20Wear%2C%20I%20would%20like%20to%20order%20a%20design."><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-wa"/></svg>WhatsApp</a>
-  <a class="btn pay" href="#pay"><span data-kri="Pe">Pay</span></a>
+  <a class="btn pay" href="tel:%23144%23" aria-label="Pay with Orange Money, dials #144#"><span data-kri="Pe">Pay</span></a>
 </nav>
 
 <dialog id="lb" aria-labelledby="lb-t">
   <button class="x" type="button" id="lb-x" aria-label="Close">×</button>
-  <img id="lb-img" src="data:," alt="" width="320" height="320">
-  <div class="bd"><h3 id="lb-t"></h3><p id="lb-p"></p><a class="btn wa" id="lb-o" href="#"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-wa"/></svg><span data-kri="Oda pan WhatsApp">Order on WhatsApp</span></a></div>
+  <div class="stage"><img id="lb-img" src="data:," alt="" width="320" height="320">
+    <span class="count" id="lb-c" hidden></span>
+    <button class="nav p" type="button" id="lb-prev" aria-label="Previous photo" hidden>‹</button>
+    <button class="nav n2" type="button" id="lb-next" aria-label="Next photo" hidden>›</button></div>
+  <div class="bd"><h3 id="lb-t"></h3><p id="lb-p"></p><a class="btn wa" id="lb-o" href="#"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-wa"/></svg><span id="lb-ol">Order on WhatsApp</span></a></div>
 </dialog>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -404,6 +456,9 @@ dialog p{margin:4px 0 12px;color:var(--mute)}
   <symbol id="ic-pin" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></symbol>
   <symbol id="ic-share" viewBox="0 0 24 24"><path d="M18 16a3 3 0 0 0-2.4 1.2l-6.7-3.4a3 3 0 0 0 0-1.6l6.7-3.4A3 3 0 1 0 15 7l-6.7 3.4a3 3 0 1 0 0 3.2L15 17a3 3 0 1 0 3-1Z"/></symbol>
   <symbol id="ic-save" viewBox="0 0 24 24"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm0 2c-3.3 0-8 1.7-8 5v1h11v-2h2v-2h2v-.4c-1.8-.9-4.5-1.6-7-1.6Zm7 0v2h2v2h-2v2h-2v-2h-2v-2h2v-2h2Z"/></symbol>
+  <symbol id="ic-ig" viewBox="0 0 24 24"><path d="M12 7.3a4.7 4.7 0 1 0 0 9.4 4.7 4.7 0 0 0 0-9.4Zm0 7.7a3 3 0 1 1 0-6 3 3 0 0 1 0 6ZM17 5.8a1.1 1.1 0 1 0 0 2.2 1.1 1.1 0 0 0 0-2.2ZM16.5 2h-9A5.5 5.5 0 0 0 2 7.5v9A5.5 5.5 0 0 0 7.5 22h9a5.5 5.5 0 0 0 5.5-5.5v-9A5.5 5.5 0 0 0 16.5 2Zm3.7 14.5a3.7 3.7 0 0 1-3.7 3.7h-9a3.7 3.7 0 0 1-3.7-3.7v-9a3.7 3.7 0 0 1 3.7-3.7h9a3.7 3.7 0 0 1 3.7 3.7Z"/></symbol>
+  <symbol id="ic-fb" viewBox="0 0 24 24"><path d="M13.5 22v-8.2h2.8l.4-3.2h-3.2V8.5c0-.9.3-1.6 1.6-1.6h1.7V4.1c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.4H7.3v3.2h2.8V22Z"/></symbol>
+  <symbol id="ic-mail" viewBox="0 0 24 24"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm9 7.6L4.4 7v10.2h15.2V7Zm0-2.2L18.6 6.8H5.4Z"/></symbol>
 </svg>
 
 <script>
@@ -446,14 +501,15 @@ dialog p{margin:4px 0 12px;color:var(--mute)}
   }
 
   var KR=document.querySelectorAll("[data-kri]");
+  var swapped=false;
   function setLang(l){
     lang=l;
-    KR.forEach(function(el){
+    if(l==="kri"||swapped){swapped=true;KR.forEach(function(el){
       if(el.dataset.en===undefined)el.dataset.en=el.innerHTML;
       el.innerHTML=l==="kri"?el.dataset.kri:el.dataset.en;
       if(el.hasAttribute("data-flip"))el.lang=l==="kri"?"en":"kri";
       else el.lang=l==="kri"?"kri":"";
-    });
+    })}
     document.documentElement.lang=l==="kri"?"kri":"en";
     $("l-en").setAttribute("aria-pressed",l==="en");$("l-kri").setAttribute("aria-pressed",l==="kri");
     try{localStorage.setItem("lang",l)}catch(e){}
@@ -475,15 +531,33 @@ dialog p{margin:4px 0 12px;color:var(--mute)}
     });
   });
 
-  /* photo lightbox */
-  var lb=$("lb"),last;
+  /* photo viewer: product photos open alone, gallery photos can be swiped */
+  var lb=$("lb"),last,set=[],idx=0,gal=[].slice.call(document.querySelectorAll(".gal button"));
+  function navShow(on){["lb-prev","lb-next","lb-c"].forEach(function(id){$(id).hidden=!on})}
+  function showGal(i){
+    idx=(i+gal.length)%gal.length;var b=gal[idx],th=b.querySelector("img"),im=$("lb-img"),full=b.getAttribute("data-full");
+    im.src=th.src;im.alt=th.alt;var hi=new Image();hi.onload=function(){if(gal[idx]===b)im.src=full};hi.src=full;
+    $("lb-t").textContent=(lang==="kri"?"Stayl #":"Style #")+(idx+1);$("lb-p").textContent=th.alt;
+    $("lb-c").textContent=(idx+1)+" / "+gal.length;$("lb-ol").textContent=lang==="kri"?"Oda dis stayl":"Order this style";
+    $("lb-o").href=wa((lang==="kri"?"a lɛk stayl #":"I like style #")+(idx+1)+(lang==="kri"?" na yu gallery.":" from your gallery."));
+  }
+  gal.forEach(function(b,i){b.addEventListener("click",function(){
+    if(!lb.showModal){window.open(b.getAttribute("data-full"));return}
+    last=b;navShow(true);showGal(i);lb.showModal()})});
+  $("lb-prev").onclick=function(){showGal(idx-1)};
+  $("lb-next").onclick=function(){showGal(idx+1)};
+  var x0=null;
+  $("lb-img").addEventListener("touchstart",function(e){x0=e.touches[0].clientX},{passive:true});
+  $("lb-img").addEventListener("touchend",function(e){if(x0===null||$("lb-next").hidden)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>45)showGal(idx+(dx<0?1:-1));x0=null});
+  lb.addEventListener("keydown",function(e){if($("lb-next").hidden)return;if(e.key==="ArrowRight")showGal(idx+1);if(e.key==="ArrowLeft")showGal(idx-1)});
   document.querySelectorAll(".item .ph").forEach(function(b){
     b.addEventListener("click",function(){
       var it=b.closest(".item"),img=b.querySelector("img");
       if(!lb.showModal){window.open(img.src);return}
-      last=b;$("lb-img").src=img.src;$("lb-img").alt=img.alt;
+      last=b;navShow(false);$("lb-img").src=img.src;$("lb-img").alt=img.alt;
       $("lb-t").textContent=it.querySelector("h3").textContent;
       $("lb-p").textContent=it.querySelector(".price").textContent.replace(/^(From|Price|Frɔm|Pris)/,"$1 ");
+      $("lb-ol").textContent=lang==="kri"?"Oda pan WhatsApp":"Order on WhatsApp";
       $("lb-o").href=it.querySelector(".order").href;
       lb.showModal();
     });
