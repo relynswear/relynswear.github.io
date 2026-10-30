@@ -21,7 +21,7 @@ axe-core: 0 violations in English and Krio modes.
 
 - Business name, tagline, live “Open now / Closed” status in Sierra Leone time (GMT)
 - 10 products with photos and prices in SLE, each with a one-tap WhatsApp order
-- Style gallery: tap any photo to open it full size, swipe or use arrows, and order that style by number on WhatsApp (full-size photos load only when tapped)
+- Style ideas gallery (inspiration photos, clearly labelled and credited): tap any photo to open it full size, swipe or use arrows, and order that style by number on WhatsApp (full-size photos load only when tapped)
 - How to order in 4 steps
 - Opening hours with today highlighted
 - Landmark-first location, Plus Code, Google Maps directions, “Guide me” on WhatsApp
@@ -40,7 +40,8 @@ axe-core: 0 violations in English and Krio modes.
 
 ## Credits
 
-- Product and gallery photos and logo: supplied by Relyn’s Wear (used with the owner’s permission). Logo traced to SVG for this page.
+- Product photos (“What we sew”) and logo: supplied by Relyn’s Wear, used with the owner’s permission. Logo traced to SVG for this page.
+- “Style ideas” photos: inspiration images shared on social media, shown as style references and labelled as not Relyn’s Wear’s own work. Rights belong to their owners; any owner can ask for removal.
 - Icons: drawn for this page.
 - Fonts: the phone’s own system font (Roboto on most Android phones), so nothing is downloaded.
 
