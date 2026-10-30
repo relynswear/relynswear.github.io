@@ -7,14 +7,14 @@ Plain HTML, CSS and a little vanilla JavaScript. No framework, no build step, no
 
 Relyn’s Wear is a bespoke tailor in Goderich, Freetown, serving women, men and kids who want Ankara, lace, bubu and casual outfits sewn to their own measurements at a fair price. The page keeps the shop’s own black, plum and gold brand and puts the three questions customers usually ask on WhatsApp right at the top: is the shop open now, how much does it cost in Leones, and where is it, with directions anchored on Zion Academy Junior Secondary School and a line to tell the okada or keke rider. Every product has a one-tap WhatsApp order with the item name already written in, the Orange Money button dials #144# directly, and one tap switches the whole page into Krio. To stay fast on Salone 3G it uses no framework and no web fonts, a hand-traced vector logo inlined in the HTML, and ten lazy-loaded WebP photos, so a first visit is under 250 KB with every thumbnail and the first screen paints from a 17 KB file; a small service worker keeps the page working offline after the first visit.
 
-## Results (Lighthouse 12, mobile)
+## Results (Lighthouse 12, mobile, measured 30 October 2026)
 
 | Test | Performance | Accessibility | Best practices | SEO |
 |---|---|---|---|---|
-| Default mobile (slow 4G) | 99 | 100 | 100 | 100 |
-| Custom 3G (700 kbps, 300 ms RTT, 4x CPU slowdown) | 93 | | | |
+| Default mobile (slow 4G) | 96 to 99 | 100 | 100 | 100 |
+| Custom 3G (700 kbps, 300 ms RTT, 4x CPU slowdown) | 89 | 100 | 100 | 100 |
 
-3G profile: First Contentful Paint 1.7 s, Largest Contentful Paint 3.0 s, Total Blocking Time 40 ms.
+3G profile: First Contentful Paint 1.6 s, Largest Contentful Paint 2.7 s. Total page weight 248 KB including every thumbnail; full-size gallery photos load only when tapped.
 axe-core: 0 violations in English and Krio modes.
 
 ## What is on the page
