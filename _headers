@@ -1,0 +1,6 @@
+/img/*
+  Cache-Control: public, max-age=2592000, immutable
+/sw.js
+  Cache-Control: no-cache
+/
+  Cache-Control: public, max-age=300

@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<!--
+  Relyn's Wear landing page. One HTML file, no frameworks, no web fonts.
+  REUSE AS A TEMPLATE: search this file for "EDIT:" to change the business details.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Relyn’s Wear | Bespoke Tailor in Goderich, Freetown</title>
+<meta name="description" content="Bespoke Ankara, lace, bubu and casual wear sewn to your measurements in Goderich, Freetown. Prices in Leones. Order on WhatsApp, pay with Orange Money or cash.">
+<meta name="theme-color" content="#0d0712">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Relyn’s Wear | Elegance on a budget">
+<meta property="og:description" content="Bespoke tailor near Zion Academy, Goderich. Prices in Leones. Order on WhatsApp.">
+<meta property="og:image" content="img/sl-print.webp">
+<link rel="icon" href="img/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="preload" as="image" href="img/sl-print.webp" fetchpriority="high">
+<!-- EDIT: structured data for Google Search and Maps -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ClothingStore","name":"Relyn’s Wear","slogan":"Elegance on a budget","image":"img/sl-print.webp","telephone":"+23278452324","priceRange":"Le 120 to Le 500+","currenciesAccepted":"SLE","paymentAccepted":"Cash, Orange Money","address":{"@type":"PostalAddress","streetAddress":"17 Macueley Street, Fonima, Femiturner","addressLocality":"Goderich, Freetown","addressCountry":"SL"},"geo":{"@type":"GeoCoordinates","latitude":8.431789,"longitude":-13.270315},"hasMap":"https://www.google.com/maps/search/?api=1&query=8.431789,-13.270315","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Wednesday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Tuesday","opens":"09:00","closes":"17:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Thursday","opens":"09:00","closes":"16:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"12:00","closes":"16:00"}],"sameAs":["https://instagram.com/relynswear"]}</script>
+<style>
+:root{
+  --bg:#0d0712;--bg2:#160b1f;--card:#1b1026;--line:#3a2550;
+  --text:#fff;--mute:#c9bfd2;--gold:#d8b871;--gold2:#f1dca6;--lilac:#d9c3f7;
+  --plum:#4b1d6e;--plum2:#6b2f97;--wa:#25d366;--wa-ink:#062b13;
+  --r:16px;color-scheme:dark
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans",sans-serif;padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold2);outline-offset:3px;border-radius:6px}
+.wrap{max-width:640px;margin:0 auto;padding:0 16px}
+.skip{position:absolute;left:8px;top:-60px;z-index:99;background:#fff;color:#000;padding:10px 14px;border-radius:10px;font-weight:700}
+.skip:focus{top:8px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+svg.i{width:22px;height:22px;flex:none;fill:currentColor}
+
+/* top bar */
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px;max-width:640px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;letter-spacing:.02em}
+.brand svg{width:30px;height:36px}
+.lang{display:flex;border:1px solid var(--line);border-radius:999px;padding:3px;background:var(--bg2)}
+.lang button{font:inherit;font-size:.9rem;font-weight:700;color:var(--mute);background:none;border:0;border-radius:999px;min-height:40px;min-width:56px;padding:0 12px;cursor:pointer}
+.lang button[aria-pressed=true]{background:var(--gold);color:#1a1205}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:8px 0 32px;background:radial-gradient(120% 70% at 50% 0%,#3a1556 0%,rgba(13,7,18,0) 70%)}
+.hero::after{content:"";position:absolute;inset:auto 0 0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.eyebrow{font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin:8px 0 6px;font-weight:700}
+h1{font-family:Georgia,"Noto Serif","Times New Roman",serif;font-weight:400;font-size:clamp(2.3rem,11vw,3.4rem);line-height:1;letter-spacing:.01em;margin:0;color:var(--gold2)}
+.tagline{font-size:clamp(1.45rem,6.6vw,2rem);line-height:1.15;font-weight:800;margin:10px 0 0;letter-spacing:-.01em}
+.tagline em,h2 em{font-style:normal;color:var(--lilac)}
+.lede{color:var(--mute);margin:10px 0 0;max-width:34ch}
+.status{display:inline-flex;align-items:center;gap:8px;margin:16px 0 0;padding:7px 14px;border-radius:999px;border:1px solid var(--line);background:var(--bg2);font-size:.95rem;font-weight:600}
+.status .dot{width:10px;height:10px;border-radius:50%;background:#8a7d96}
+.status.on{border-color:#2f7a4a}.status.on .dot{background:var(--wa);box-shadow:0 0 0 4px rgba(37,211,102,.2);animation:pulse 1.8s infinite}
+.status.off .dot{background:#e0a24c}
+@keyframes pulse{50%{box-shadow:0 0 0 7px rgba(37,211,102,0)}}
+
+.fan{position:relative;height:250px;margin:22px auto 0;max-width:360px}
+.fan img{position:absolute;top:10px;width:46%;aspect-ratio:3/4;object-fit:cover;border-radius:14px;border:3px solid #2a1838;box-shadow:0 14px 30px rgba(0,0,0,.55)}
+.fan .f1{left:2%;transform:rotate(-9deg)}
+.fan .f3{right:2%;transform:rotate(9deg)}
+.fan .f2{left:27%;top:0;width:46%;z-index:2;border-color:var(--gold)}
+.seal{position:absolute;z-index:3;right:-2px;bottom:-4px;width:104px;height:104px;display:grid;place-items:center;text-align:center;text-decoration:none;
+  background:var(--lilac);color:#2b0f45;font-weight:800;font-size:.8rem;line-height:1.1;letter-spacing:.03em;text-transform:uppercase;
+  clip-path:polygon(50% 0%,59% 9%,71% 4%,75% 16%,88% 15%,86% 28%,97% 33%,91% 45%,100% 54%,90% 61%,94% 74%,81% 76%,79% 89%,67% 86%,59% 97%,50% 90%,41% 97%,33% 86%,21% 89%,19% 76%,6% 74%,10% 61%,0% 54%,9% 45%,3% 33%,14% 28%,12% 15%,25% 16%,29% 4%,41% 9%);
+  transform:rotate(-8deg)}
+.seal b{display:block;font-size:1.05rem}
+
+.cta2{display:grid;grid-template-columns:1.35fr 1fr;gap:10px;margin:22px 0 0}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;text-align:center;text-decoration:none;font:inherit;font-weight:800;font-size:1.05rem;line-height:1.2;
+  min-height:52px;padding:12px 14px;border-radius:14px;border:2px solid transparent;cursor:pointer}
+.btn.wa{background:var(--wa);color:var(--wa-ink)}
+.btn.call{background:transparent;color:var(--gold2);border-color:var(--gold)}
+.btn.pay{background:var(--plum);color:#fff;border-color:var(--plum2)}
+.btn.ghost{background:var(--bg2);color:#fff;border-color:var(--line)}
+.trust{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:18px 0 0}
+.trust li{display:flex;align-items:center;gap:6px;padding:6px 12px;border-radius:999px;background:rgba(217,195,247,.08);border:1px solid #4a3163;font-size:.88rem;font-weight:600}
+.trust li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold)}
+
+/* sections */
+section{padding-top:44px}
+h2{font-size:clamp(1.6rem,7vw,2rem);line-height:1.1;font-weight:800;letter-spacing:-.01em;margin:0 0 4px}
+.h2k{display:block;color:var(--gold);font-size:.95rem;font-weight:600;font-style:italic;margin:0 0 16px}
+.note{color:var(--mute);font-size:.95rem;margin:14px 0 0}
+
+/* catalogue */
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;list-style:none;padding:0;margin:0}
+.item{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.item button.ph{all:unset;display:block;cursor:zoom-in;position:relative}
+.item button.ph:focus-visible{outline:3px solid var(--gold2);outline-offset:-3px}
+.item img{width:100%;aspect-ratio:1;object-fit:cover;background:#241632}
+.item .bd{display:flex;flex-direction:column;flex:1;padding:10px 12px 12px}
+.item h3{font-size:1rem;line-height:1.25;margin:0}
+.item p{font-size:.85rem;line-height:1.35;color:var(--mute);margin:3px 0 0}
+.item .ft{margin-top:auto;padding-top:10px;display:flex;flex-direction:column;gap:8px}
+.price{font-weight:800;font-size:1.05rem;color:var(--gold2)}
+.price small{display:block;font-size:.72rem;font-weight:600;color:var(--mute);letter-spacing:.06em;text-transform:uppercase}
+.price.ask{color:var(--lilac);font-size:.95rem}
+.order{display:flex;align-items:center;justify-content:center;gap:6px;min-height:44px;border-radius:12px;background:var(--wa);color:var(--wa-ink);font-weight:800;font-size:.95rem;text-decoration:none}
+.order svg{width:18px;height:18px}
+
+/* steps */
+.steps{list-style:none;padding:0;margin:0;counter-reset:s;display:grid;gap:10px}
+.steps li{counter-increment:s;display:flex;gap:14px;align-items:flex-start;padding:14px;background:var(--card);border:1px solid var(--line);border-radius:var(--r)}
+.steps li::before{content:counter(s);flex:none;display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--gold);color:#1a1205;font-weight:800}
+.steps b{display:block}
+.steps span{color:var(--mute);font-size:.95rem}
+
+/* cards */
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px}
+table{width:100%;border-collapse:collapse}
+th,td{padding:11px 10px;text-align:left;font-weight:400;border-bottom:1px solid var(--line)}
+td{text-align:right;font-weight:700}
+tr:last-child th,tr:last-child td{border-bottom:0}
+tr.today{background:#2c1840}
+tr.today th{box-shadow:inset 4px 0 0 var(--gold);font-weight:800}
+tr.today th::after{content:attr(data-today);margin-left:8px;font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#1a1205;background:var(--gold);padding:2px 8px;border-radius:999px;vertical-align:2px}
+.closed{color:var(--mute);font-weight:600}
+
+.landmark{font-size:1.2rem;line-height:1.35;font-weight:800;margin:0}
+.landmark em{font-style:normal;color:var(--gold2)}
+.map{margin:14px 0;border-radius:12px;background:#120a1a;border:1px solid var(--line)}
+.map svg{display:block;width:100%;height:auto}
+.addr{margin:0;color:var(--mute)}
+.addr b{color:#fff}
+.tip{margin:12px 0 0;padding:12px 14px;border-radius:12px;background:rgba(216,184,113,.1);border-left:4px solid var(--gold);font-size:.95rem}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.row2 .btn{padding:10px 8px;gap:6px;font-size:1rem}
+
+.pay-card+.pay-card{margin-top:12px}
+.pay-head{display:flex;align-items:center;gap:12px;margin:0 0 10px}
+.pay-logo{display:grid;place-items:center;width:44px;height:44px;border-radius:12px;font-weight:900;font-size:.8rem;flex:none}
+.om{background:#ff7900;color:#000}
+.cash{background:#2f7a4a;color:#fff}
+.pay-head h3{margin:0;font-size:1.1rem}
+.pay-head p{margin:0;color:var(--mute);font-size:.9rem}
+.num{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 12px;border-radius:12px;background:#0f0815;border:1px dashed #5b3f78}
+.num strong{font-size:1.35rem;letter-spacing:.04em;font-variant-numeric:tabular-nums}
+.copy{font:inherit;font-size:.95rem;font-weight:800;color:var(--gold2);background:none;border:2px solid var(--gold);border-radius:10px;min-height:44px;padding:0 16px;cursor:pointer}
+.how{margin:10px 0 0;padding-left:20px;color:var(--mute);font-size:.95rem}
+.how li{margin:2px 0}
+
+.share{margin-top:44px;padding:22px 18px;border-radius:20px;text-align:center;background:linear-gradient(160deg,#2b0f45,#4b1d6e);border:2px solid var(--gold)}
+.share h2{color:var(--gold2)}
+.share p{margin:6px 0 0;color:#eadff5}
+
+footer{margin:36px 0 24px;color:var(--mute);font-size:.9rem}
+footer p{margin:6px 0}
+footer a{color:var(--gold2)}
+footer .bye{color:var(--gold);font-style:italic;font-size:1rem}
+
+/* sticky contact bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:20;display:grid;grid-template-columns:1fr 1.4fr 1fr;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom,0px));
+  background:rgba(13,7,18,.96);border-top:1px solid var(--line);transition:transform .2s}
+.bar .btn{min-height:50px;font-size:.98rem;padding:8px 6px;gap:6px}
+.bar.hide{transform:translateY(110%)}
+
+/* lightbox */
+dialog{padding:0;border:1px solid var(--line);border-radius:18px;background:var(--card);color:#fff;width:min(92vw,460px);max-height:92vh;overflow:auto}
+dialog::backdrop{background:rgba(0,0,0,.85)}
+dialog img{width:100%;aspect-ratio:1;object-fit:cover}
+dialog .bd{padding:14px 16px 16px}
+dialog h3{margin:0;font-size:1.25rem}
+dialog p{margin:4px 0 12px;color:var(--mute)}
+.x{position:absolute;top:10px;right:10px;width:44px;height:44px;border-radius:50%;border:0;background:rgba(0,0,0,.7);color:#fff;font-size:1.6rem;line-height:1;cursor:pointer}
+
+@media (min-width:600px){
+  .grid{grid-template-columns:1fr 1fr 1fr}
+  .fan{height:300px}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main" data-kri="Go to di men pej">Skip to content</a>
+
+<nav class="top" aria-label="Site">
+  <a class="brand" href="#top" aria-label="Relyn’s Wear, back to top">
+    <svg viewBox="0 0 300 355" aria-hidden="true"><path fill="#d8b871" fill-rule="evenodd" d="M82.8 341C81.7 340.6 80.4 340.1 79.9 339.8C79.5 339.6 78.9 339.3 78.6 339.3C78 339.3 67.2 333.9 66.1 333C65.6 332.6 65 332.3 64.8 332.3C64.6 332.3 64.2 332 64 331.7C63.8 331.3 63.4 331 63.2 331C61.3 331 47.2 318.1 42.9 312.4C38.1 306 36.7 304 35.3 301.4C34.8 300.3 34.1 299.2 33.8 299C33.5 298.8 33.3 298.4 33.3 298.2C33.3 298 32.7 296.6 32 295.1C31.3 293.6 30.7 292.2 30.7 291.9C30.7 291.7 30.5 291.3 30.3 291.1C29.6 290.4 25.8 279.5 24.7 275C22.4 265.8 21.6 259.6 21.1 249.1C20.9 244.2 21.6 233.6 22.4 228.7C23 224.7 23.2 223.5 23.6 222C23.8 221.2 24.1 219.8 24.3 219C24.6 217.4 26.2 211.9 26.6 210.8C26.8 210.5 27.2 209.3 27.6 208.2C28 207.1 28.6 205.3 29 204.3C29.4 203.3 29.8 202.1 30 201.6C30.2 201.1 30.7 199.6 31.3 198.4C31.8 197.2 32.4 195.9 32.5 195.7C32.6 195.4 33.4 193.8 34.3 192.2C35.3 190.5 36.2 188.7 36.5 188.2C36.8 187.6 37.4 186.6 37.8 185.8C38.3 185.1 39.1 183.7 39.7 182.7C40.2 181.7 41 180.4 41.3 179.8C41.7 179.3 42.3 178.2 42.7 177.5C43.1 176.8 44.5 174.5 45.8 172.5C50.2 165.9 50.8 164 50.8 157.5C50.8 152.3 50.1 148.6 48.5 144.8C48.3 144.3 48 143.5 47.8 143C47.7 142.5 47.4 141.9 47.1 141.5C46.9 141.1 46.7 140.5 46.7 140.1C46.7 139.7 46.4 139.2 46 139C45.6 138.8 45.3 138.4 45.3 138C45.3 137.3 44.6 135.6 40.2 126.5C38.6 123.4 36.9 119.7 36.3 118.3C35.7 117 35.1 115.6 35 115.3C34.8 115.1 34.6 114.6 34.5 114.3C34.4 114.1 33.8 112.7 33.1 111.3C32.5 109.9 32 108.7 32 108.5C32 108.3 31.8 107.8 31.5 107.3C31.3 106.8 30.6 104.9 30 103.1C29.4 101.3 28.8 99.5 28.7 99.2C27.3 95.9 26.8 90.1 27.4 85.8C28 82.4 28.8 80.5 30.9 78.3C32.9 76.2 33.7 75.7 41 73.2C45.4 71.6 47.3 70.8 51.2 68.8C53.1 67.8 54.8 67 55 67C55.7 67 60.7 61.9 61.5 60.3C62.7 58.3 63.7 55.3 64.1 52.7C64.5 50 64.6 43.4 64.3 41.3C64.1 40.5 64.1 39.6 64.3 39.4C64.5 39 71.4 38 73.8 38C74.9 38 76 36.5 75.8 35.1C75.7 34.4 75.8 33.5 76.1 33.1C77.6 30.6 77.7 30.3 77.5 28.8C77.3 27.7 77 27.2 76.5 27C75.4 26.4 73.9 23.5 73.9 21.7C73.8 17.8 75.6 15 78.5 14.1C82 13.1 85.3 14.3 86.6 17.1C87.9 19.9 87.9 21.5 86.6 24.3C86 25.6 85.2 26.8 84.8 27C83.9 27.4 83.5 29.7 84.1 30.9C84.4 31.4 84.9 32.4 85.3 33.1C85.7 34 85.9 34.7 85.8 35.6C85.7 36.5 85.8 37 86.1 37.3C86.6 37.7 92.5 38.7 94.5 38.7C96.5 38.7 96.7 39.1 96.7 44.8C96.7 52.4 97.6 56.3 100.3 60.3C103.2 64.5 108.9 67.7 117.3 69.7C124.3 71.4 134.4 73.4 134.7 73.1C134.9 73 135.3 73.2 135.7 73.4C136.3 73.7 141.3 73.9 157.3 74C179.3 74.3 180.1 74.3 187.5 76C193.1 77.3 198.8 79.1 202.2 80.7C203.3 81.2 204.3 81.7 204.5 81.7C204.6 81.7 205.1 82 205.6 82.3C206 82.7 206.7 83 207 83C207.4 83 207.8 83.3 208.1 83.6C208.3 83.9 209.6 84.9 211 85.8C214.9 88.5 220.4 94.2 222.7 98.2C223.1 98.7 223.5 99.4 223.6 99.7C224.3 100.6 226.2 105.2 226.8 107C227.2 108 227.6 109.5 227.9 110.2C230.3 117.1 230.2 132.2 227.7 139.8C226.5 143.7 224.2 148.8 222.3 151.9C221.6 153.1 221 154.2 221 154.4C221 154.5 220.8 154.8 220.5 154.9C220.3 155.1 219.1 156.3 217.9 157.7C214.6 161.7 211 164.7 206.2 167.6C203.5 169.2 199.8 171.1 198.6 171.5C193 173.5 187.2 175.2 184.9 175.5C184 175.6 183.2 175.9 183.1 176C182.9 176.4 183.9 178.1 185.3 179.7C185.9 180.4 186.7 181.5 187.1 182.1C187.5 182.8 188.7 184.5 189.8 185.9C190.9 187.4 192.2 189.2 192.7 189.9C194.5 192.4 200.3 200.2 200.8 200.7C201.1 201.1 201.3 201.5 201.3 201.6C201.3 201.8 202 202.8 202.9 204C204.5 206 207 209.4 210.3 213.8C212.1 216.3 213.2 217.7 214 218.6C214.9 219.7 216 221.3 216 221.6C216 221.8 216.4 222.2 216.8 222.6C217.3 223 217.7 223.5 217.7 223.6C217.7 223.8 218.8 225.3 220.1 226.9C221.4 228.6 222.9 230.5 223.3 231.2C223.8 231.8 224.5 232.7 224.8 233.1C225.2 233.6 226.5 235.4 227.8 237.2C230.3 240.5 239.9 253 240.9 254.2C241.3 254.5 242.1 255.6 242.7 256.4C245 259.6 251.7 266.5 254.2 268.4C255 269 255.7 269.6 255.7 269.7C255.7 269.9 256.8 270.7 258.1 271.5C264.3 275.6 269.2 277.4 274.7 277.9C280.4 278.3 280.5 278.4 280.5 279.7L280.5 280.8L258.9 280.9C244.4 281 237.1 280.9 236.6 280.7C236.3 280.5 235.8 279.8 235.5 279.2C235.2 278.6 234.5 277.5 233.8 276.7C233.2 275.8 232.3 274.6 231.8 274C231.4 273.4 230 271.6 228.8 270C227.6 268.4 225.4 265.4 224 263.3C222.5 261.1 221.2 259.2 221 258.9C220.1 257.9 216 251.9 216 251.7C216 251.5 215.8 251.2 215.5 251.1C215.2 250.9 214.7 250.4 214.4 249.9C214.1 249.5 212.6 247.3 211 245.1C207.4 240.1 207 239.5 206.2 238.2C205.5 237 204 235 201.8 232.2C201.1 231.3 200.2 230.1 199.8 229.5C197.4 226 197 225.3 195.1 222.7C194.1 221.3 193.3 220 193.3 219.8C193.3 219.6 193 219.2 192.7 219C192.3 218.8 192 218.5 192 218.3C192 218.1 191.1 216.7 189.9 215.1C188.8 213.5 187.4 211.5 186.8 210.7C186.3 210 185.3 208.5 184.6 207.6C183.9 206.6 182.1 204 180.5 201.7C179 199.4 177.4 197.1 176.9 196.6C176.5 196.1 175.7 195.1 175.2 194.3C173.5 191.9 169.3 187.2 168.6 186.9C168.3 186.8 168 186.5 168 186.4C168 186.2 167.5 185.8 166.9 185.4C162.7 182.7 161.6 182 161.3 182C161.1 182 160.6 181.8 160.2 181.6C156.5 179.5 146.6 178.7 139.8 180C136 180.7 134.9 181.1 132.3 182.5C126.8 185.6 124.1 188.1 120.7 193.3C118.2 196.9 116.4 205.1 116.8 210.7C117 214 117.9 218.7 118.3 219.1C118.5 219.3 118.7 219.8 118.7 220.2C118.7 220.6 118.9 221.1 119.1 221.3C119.4 221.5 119.7 222.1 119.8 222.6C119.9 223.1 120.5 224 121 224.6C121.5 225.3 122.1 226.2 122.4 226.7C123.3 228.1 128.5 233.2 129.3 233.5C129.7 233.6 130 233.8 130 234C130 234.3 134.4 237.3 134.9 237.3C135.1 237.3 135.5 237.6 135.8 238C136.2 238.4 136.6 238.7 136.7 238.7C137 238.7 143.4 241.7 150.2 245C152.7 246.3 156.5 248 158.5 248.8C163.5 250.9 172.7 255.6 173.6 256.4C174 256.8 174.6 257.3 174.9 257.5C179.6 260.2 188.7 269 188.7 270.8C188.7 271.1 189 271.6 189.4 272.1C190.3 273.4 193.3 280.8 193.3 281.9C193.3 282.5 193.4 283 193.6 283.1C194 283.6 194.6 289.3 194.6 292.8C194.7 297.7 193.6 304.7 192.5 307.2C192.2 307.8 192 308.4 192 308.6C192 309.5 189.3 314.9 187.4 317.8C186.2 319.6 184.9 321.5 184.6 321.9C184.3 322.4 183.7 323.1 183.2 323.5C182.7 324 182.2 324.5 182.1 324.7C181.5 325.7 178 328.5 175.5 330.2C167.6 335.3 159 338.2 149.2 339C145.7 339.3 132.4 338.9 131.8 338.6C131.6 338.4 130.2 338.2 128.8 338C125.6 337.6 121.6 336.7 120 336.2C117.8 335.4 114.1 334.3 113.5 334.3C113.2 334.3 112.6 334.2 112.2 333.9C111.2 333.4 106.4 331.7 104.8 331.3C103.7 331.1 103 331.1 102 331.5C101.3 331.8 100.4 332 99.9 331.9L99.2 331.8L99.2 312.3L99.2 292.8L100.1 292.7C101.1 292.6 101 292.5 101.8 295.9C103.6 303.5 106.8 311.3 109.9 315.2C110.2 315.7 110.8 316.3 111.1 316.7C113.2 319.5 115.3 321.9 117.1 323.3C118.2 324.2 119.5 325.3 119.8 325.7C120.2 326 120.6 326.3 120.8 326.3C120.9 326.3 121.6 326.7 122.3 327.2C123 327.8 124.4 328.5 125.4 329C126.4 329.4 127.9 330.1 128.8 330.5C129.8 330.9 131.4 331.5 132.5 331.8C133.6 332.2 135 332.6 135.7 332.8C137.6 333.6 145.7 334.1 149.6 333.7C153.1 333.4 160.5 331.3 163 330C163.6 329.6 164.3 329.3 164.5 329.3C165.4 329.3 173.8 321.5 174.6 319.9C174.8 319.3 175.6 317.9 176.2 316.8C179.5 311.2 181 301.4 179.3 295.3C179 293.9 178.7 292.5 178.7 292.1C178.7 291.7 178 290.1 177.1 288.5C173.2 280.7 168 275.8 158.5 270.8C156.5 269.8 154.6 268.8 154.3 268.6C154.1 268.5 153.5 268.2 153 268C152.5 267.8 151.9 267.5 151.7 267.4C151.1 267 148.5 265.9 145.2 264.3C143.9 263.8 142.4 263.1 141.8 262.8C141.3 262.6 139.5 261.8 137.8 261C136.1 260.3 133.7 259.2 132.4 258.5C131.2 257.8 129.2 256.8 128 256.1C126.8 255.5 125.6 254.8 125.3 254.5C125.1 254.3 123.8 253.5 122.5 252.7C118.1 249.9 113.3 245.3 110.5 241.1C107.1 236 106.6 234.7 104.3 227.2C103 222.7 104.1 207.1 106 202.8C106.2 202.5 106.6 201.3 107 200.3C108.3 196.7 112.2 190.2 114.8 187.3C115.6 186.4 120.4 182.3 121.5 181.5C122.3 181 122 179.5 121 179.2C120.6 179.1 120.2 178.6 120 178.3C119.8 177.9 118.8 176.7 117.8 175.7C115.5 173.2 113.3 170.5 113.3 169.9C113.3 169.7 113.1 169.2 112.9 168.8C112.6 168.5 112 166.9 111.5 165.3C110.1 160.8 110 150.7 111.3 142.7C111.5 141.7 111.9 139.3 112.2 137.5C112.5 135.7 112.9 133.5 113 132.7C113.3 131.1 115 124.2 115.6 122.5C115.8 122 116.3 120.3 116.7 118.8C117.8 114.6 118.4 112.6 118.8 111.3C119.1 110.7 119.6 108.9 120 107.4C120.7 104.5 122.1 99.9 122.6 98.8C123.1 97.8 124.7 91.6 125.4 87.8C126.8 80.6 125.3 78.2 117.9 75.3C115.6 74.4 113.4 73.7 113 73.7C112.7 73.7 112.2 73.4 112 73.2C111.8 72.9 111.4 72.7 111.1 72.7C110.7 72.7 105.4 70 102.8 68.5C102.1 68.1 101.1 67.5 100.7 67.3C98.1 66 94.7 61 94.2 57.7C94.1 57 93.7 55.7 93.5 54.7C93.2 53.7 92.9 51 92.8 48.7C92.7 46.4 92.4 44.2 92.3 43.9C91.8 43 69.2 43.1 68.7 44C68.5 44.3 68.3 46.2 68.3 48.1C68.3 54.5 67.7 58.2 66.3 61C63.8 65.5 61.8 67.7 57.6 70.1C56.7 70.6 56 71.2 56 71.3C56 71.6 51.1 74.1 48.2 75.1C43.6 76.9 37.1 80.7 35.4 82.7C33 85.5 32.9 91.5 35.1 99.2C36.6 104.8 40 114.1 40.9 115C41.1 115.3 41.3 115.7 41.3 115.9C41.3 116.1 41.7 117.1 42.2 118.1C42.8 119 43.6 120.8 44.1 122C44.9 123.9 46 126.2 49.1 132.3C49.5 132.9 50.2 134.6 50.8 136C51.4 137.4 52 138.7 52.2 139C52.4 139.3 52.6 139.9 52.8 140.4C53.1 141.1 54.5 144.7 55.3 146.8C57.4 152 57.9 161.6 56.4 166.3C56 167.6 55.5 168.8 55.3 168.9C55.1 169 55 169.3 55 169.6C55 169.9 53.9 171.9 52.5 174.1C51.1 176.3 50 178.1 50 178.2C50 178.3 49.7 178.8 49.4 179.3C48.1 181.1 46.4 183.9 45.3 185.8C44.7 186.9 43.7 188.8 43.1 190C42.4 191.2 41.6 192.7 41.3 193.3C41 193.9 40.6 194.5 40.4 194.8C40.2 195 40 195.6 39.8 196.1C39.7 196.6 39.3 197.2 39 197.5C38.6 197.8 38.3 198.2 38.3 198.4C38.3 198.6 37.8 199.9 37.2 201.4C36.2 203.8 35.5 205.7 33.5 211C33.1 212.2 31.5 217.9 30.5 221.5C28.2 230.7 27.1 247.3 28.1 256.7C29.1 264.9 30 270.3 31.4 275.5C32.1 278.2 32.8 280.9 32.9 281.5C33 282.1 33.2 282.7 33.4 282.9C33.5 283 34.2 284.6 34.8 286.4C37.6 293.5 38 294.5 39.7 297.4C40.5 298.8 40.7 299.2 41.3 300.3C41.6 301 42.2 302 42.5 302.7C43.4 304.4 47.2 309.9 49.5 312.9C50.2 313.8 51.8 315.5 52.9 316.8C54.1 318 55.3 319.5 55.7 320.1C56.3 321.1 57 321.8 65 328.3C70.6 332.8 72.6 334.3 75.5 335.7C76.6 336.3 78.1 337.1 78.8 337.5C79.6 338 80.4 338.4 80.7 338.5C81.3 338.8 84.7 340.3 85.3 340.6C86 341 86.1 341.7 85.4 341.7C85.1 341.6 83.9 341.3 82.8 341ZM129.5 176.8C137 173.9 138.9 173.7 152.7 173.5C167.4 173.3 171.4 172.9 177 171.4C179.6 170.7 183.4 169.3 184 168.8C184.3 168.6 185.4 167.9 186.5 167.3C189.1 165.9 191.9 164 192.1 163.5C192.2 163.2 192.5 163 192.8 163C193.1 163 193.5 162.7 193.7 162.4C194 162.1 194.5 161.6 194.9 161.3C195.3 161.1 196.2 160.1 197 159.2C197.7 158.2 198.6 157.2 199 156.8C200.2 155.4 202.6 151.4 203.8 148.8C207.4 140.9 208.8 131.3 208 121C207.4 113.4 206.2 109.1 202.6 101C201.4 98.4 196.3 91.8 194.9 90.9C194.6 90.8 193.7 90 192.8 89.2C191.9 88.4 191.1 87.7 190.9 87.7C190.8 87.7 190.3 87.3 189.8 86.9C189.3 86.4 187.9 85.6 186.7 85C185.5 84.4 184.3 83.7 184 83.5C183.5 83.1 179 81.7 176.5 81C175.8 80.9 173.7 80.5 172 80.3C170.3 80.1 168.5 79.8 168.1 79.6C167.6 79.5 162.1 79.3 155.8 79.3L144.4 79.3L142.4 81C141.3 81.9 140.1 83 139.8 83.5C139.4 84 138.9 84.7 138.5 85.2C137.4 86.6 131 98.7 130.6 100.2C130.5 100.5 129.9 102.1 129.3 103.7C128.7 105.2 128.1 107 128 107.5C127.8 108 127.3 109.6 126.8 111L125.8 113.5L125.7 145C125.6 164.3 125.6 176.8 125.8 177.3C126.2 178.1 126.1 178.1 129.5 176.8Z"/></svg>
+    <span>Relyn’s Wear</span>
+  </a>
+  <div class="lang" role="group" aria-label="Language / Langwej">
+    <button type="button" id="l-en" aria-pressed="true" lang="en">EN</button>
+    <button type="button" id="l-kri" aria-pressed="false" lang="kri">Krio</button>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <!-- EDIT: business type and area -->
+    <p class="eyebrow" data-kri="Tela fɔ yu · Gɔdrich, Fritɔŋ">Bespoke tailor · Goderich, Freetown</p>
+    <h1>Relyn’s Wear</h1>
+    <!-- EDIT: tagline -->
+    <p class="tagline" data-kri="Fayn fayn klos we <em>nɔ go brok yu pɔkit</em>">Elegance on a <em>budget</em></p>
+    <p class="lede" data-kri="Ankara, lays, bubu ɛn kazhwal klos, wi de sɔw dɛn to yu yon mɛzhɔ. Fɔ man, uman ɛn pikin.">Ankara, lace, bubu and casual wear, sewn to your own measurements. For men, women and kids.</p>
+
+    <p class="status" id="status" role="status" aria-live="polite"><span class="dot" aria-hidden="true"></span><span id="status-t">Open Monday to Saturday</span></p>
+
+    <div class="fan">
+      <img class="f1" src="img/embroidery-bubu.webp" width="320" height="320" alt="Lavender bubu with red flower embroidery" decoding="async">
+      <img class="f2" src="img/sl-print.webp" width="320" height="320" alt="Yellow and magenta SL print two-piece outfits on mannequins" fetchpriority="high">
+      <img class="f3" src="img/mermaid-corset.webp" width="320" height="320" alt="Green and teal corset mermaid dress" decoding="async">
+      <a class="seal" data-wa data-msg="book" href="https://wa.me/23278452324?text=Hello%20Relyn%E2%80%99s%20Wear%2C%20I%20want%20to%20book%20a%20design." data-kri="Buk wi <b>tide!</b>">Book us <b>today!</b></a>
+    </div>
+
+    <div class="cta2" id="hero-cta">
+      <!-- EDIT: WhatsApp number (country code, no plus) -->
+      <a class="btn wa" data-wa href="https://wa.me/23278452324?text=Hello%20Relyn%E2%80%99s%20Wear%2C%20I%20would%20like%20to%20order%20a%20design."><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-wa"/></svg><span data-kri="WhatsApp wi">WhatsApp us</span></a>
+      <!-- EDIT: phone number -->
+      <a class="btn call" href="tel:+23278452324"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-call"/></svg><span data-kri="Kɔl wi">Call us</span></a>
+    </div>
+
+    <ul class="trust">
+      <li data-kri="Wi de sɔw to yu mɛzhɔ">Sewn to your measurements</li>
+      <li data-kri="Sɛn foto, wi go sɔw am">Send a photo, we sew it</li>
+      <li data-kri="Man, uman ɛn pikin">Men, women and kids</li>
+    </ul>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+
+  <section id="sew" aria-labelledby="h-sew">
+    <h2 id="h-sew" data-kri="Wetin wi de <em>mek</em>">What we <em>sew</em></h2>
+    <span class="h2k" lang="kri" data-kri="What we sew" data-flip>Wetin wi de mek</span>
+
+    <!-- EDIT: products. Copy one <li class="item"> block per product. data-item is the name sent in the WhatsApp order. -->
+    <ul class="grid">
+      <li class="item">
+        <button class="ph" type="button" aria-label="See bigger photo: SL traditional print"><img src="img/sl-print.webp" width="320" height="320" alt="Yellow and magenta SL print two-piece outfits on mannequins" loading="lazy" decoding="async"></button>
+        <div class="bd"><h3>SL traditional print</h3><p data-kri="Tu-pis print stayl">Two-piece print styles</p>
+          <div class="ft"><p class="price"><small data-kri="Frɔm">From</small>Le 500</p>
+          <a class="order" data-wa data-item="SL traditional print" href="https://wa.me/23278452324?text=Hello%20Relyn%E2%80%99s%20Wear%2C%20I%20would%20like%20to%20order%3A%20SL%20traditional%20print"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><use href="#ic-wa"/></svg><span data-kri="Oda">Order</span></a></div></div>
+      </li>
+      <li class="item">
+        <button class="ph" type="button" aria-label="See bigger photo: Corset top"><img src="img/corset-top.webp" width="320" height="320" alt="Corset top in colourful Ankara print with puff sleeves" loading="lazy" decoding="async"></button>
+        <div class="bd"><h3>Corset top (blouse)</h3><p data-kri="Ankara wit pɔf slip">Ankara with puff sleeves</p>
+          <div class="ft"><p class="price"><small data-kri="Pris">Price</small>Le 250</p>
+          <a class="order" data-wa data-item="Corset top (blouse)" href="https://wa.me/23278452324?text=Hello%20Relyn%E2%80%99s%20Wear%2C%20I%20would%20like%20to%20order%3A%20Corset%20top"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><use href="#ic-wa"/></svg><span data-kri="Oda">Order</span></a></div></div>
+      </li>
+      <li class="item">
+        <button class="ph" type="button" aria-label="See bigger photo: Ankara kimono"><img src="img/ankara-kimono.webp" width="320" height="320" alt="Black and white patterned Ankara kimono outfit" loading="lazy" decoding="async"></button>
+        <div class="bd"><h3>Ankara kimono</h3><p data-kri="Plen ɔ print Afrikana">Plain or print Africana</p>
+          <div class="ft"><p class="price"><small data-kri="Pris">Price</small>Le 120 to Le 250</p>
+          <a class="order" data-wa data-item="Ankara kimono" href="https://wa.me/23278452324?text=Hello%20Relyn%E2%80%99s%20Wear%2C%20I%20would%20like%20to%20order%3A%20Ankara%20kimono"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><use href="#ic-wa"/></svg><span data-kri="Oda">Order</span></a></div></div>
+      </li>
+      <li class="item">
+        <button class="ph" type="button" aria-label="See bigger photo: Embroidered bubu"><img src="img/embroidery-bubu.webp" width="320" height="320" alt="Lavender bubu with red flower embroidery" loading="lazy" decoding="async"></button>
+        <div class="bd"><h3>Embroidered bubu</h3><p data-kri="Ambrɔydri wit an">Hand embroidery</p>
+          <div class="ft"><p class="price ask" data-kri="Ɔmɔs? Aks wi">Price on request</p>
+          <a class="order" data-wa data-item="Embroidered bubu" href="https://wa.me/23278452324?text=Hello%20Relyn%E2%80%99s%20Wear%2C%20I%20would%20like%20to%20order%3A%20Embroidered%20bubu"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><use href="#ic-wa"/></svg><span data-kri="Aks di pris">Ask price</span></a></div></div>
+      </li>
+      <li class="item">
+        <button class="ph" type="button" aria-label="See bigger photo: Beaded lace gowns"><img src="img/beaded-lace.webp" width="320" height="320" alt="Pink beaded lace gowns with ruffles on mannequins" loading="lazy" decoding="async"></button>
+        <div class="bd"><h3>Beaded lace gowns</h3><p data-kri="Fɔ ingejmɛnt ɛn big de">For engagements and big days</p>
+          <div class="ft"><p class="price ask" data-kri="Ɔmɔs? Aks wi">Price on request</p>
+          <a class="order" data-wa data-item="Beaded lace gown" href="https://wa.me/23278452324?text=Hello%20Relyn%E2%80%99s%20Wear%2C%20I%20would%20like%20to%20order%3A%20Beaded%20lace%20gown"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><use href="#ic-wa"/></svg><span data-kri="Aks di pris">Ask price</span></a></div></div>
+      </li>
+      <li class="item">
+        <button class="ph" type="button" aria-label="See bigger photo: Corset mermaid dress"><img src="img/mermaid-corset.webp" width="320" height="320" alt="Green and teal corset mermaid dress" loading="lazy" decoding="async"></button>
+        <div class="bd"><h3>Corset mermaid dress</h3><p data-kri="Kɔsɛt ɛn bɔstiay">Corset and bustier styles</p>
+          <div class="ft"><p class="price ask" data-kri="Ɔmɔs? Aks wi">Price on request</p>
+          <a class="order" data-wa data-item="Corset mermaid dress" href="https://wa.me/23278452324?text=Hello%20Relyn%E2%80%99s%20Wear%2C%20I%20would%20like%20to%20order%3A%20Corset%20mermaid%20dress"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><use href="#ic-wa"/></svg><span data-kri="Aks di pris">Ask price</span></a></div></div>
+      </li>
+      <li class="item">
+        <button class="ph" type="button" aria-label="See bigger photo: Ankara peplum and skirt"><img src="img/peplum-skirt.webp" width="320" height="320" alt="Purple Ankara peplum top with matching pencil skirt" loading="lazy" decoding="async"></button>
+        <div class="bd"><h3>Peplum top and skirt</h3><p data-kri="Ankara blawz ɛn skɛt">Ankara blouse and pencil skirt</p>
+          <div class="ft"><p class="price ask" data-kri="Ɔmɔs? Aks wi">Price on request</p>
+          <a class="order" data-wa data-item="Peplum top and skirt" href="https://wa.me/23278452324?text=Hello%20Relyn%E2%80%99s%20Wear%2C%20I%20would%20like%20to%20order%3A%20Peplum%20top%20and%20skirt"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><use href="#ic-wa"/></svg><span data-kri="Aks di pris">Ask price</span></a></div></div>
+      </li>
+      <li class="item">
+        <button class="ph" type="button" aria-label="See bigger photo: Skirts and trousers"><img src="img/satin-skirt.webp" width="320" height="320" alt="Black satin A-line skirt" loading="lazy" decoding="async"></button>
+        <div class="bd"><h3>Skirts and trousers</h3><p data-kri="Ɔl kayn, lɛk dis satin skɛt">All kinds, like this satin A-line</p>
+          <div class="ft"><p class="price ask" data-kri="Ɔmɔs? Aks wi">Price on request</p>
+          <a class="order" data-wa data-item="Skirts and trousers" href="https://wa.me/23278452324?text=Hello%20Relyn%E2%80%99s%20Wear%2C%20I%20would%20like%20to%20order%3A%20Skirts%20and%20trousers"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><use href="#ic-wa"/></svg><span data-kri="Aks di pris">Ask price</span></a></div></div>
+      </li>
+      <li class="item">
+        <button class="ph" type="button" aria-label="See bigger photo: Bubu and Mariama Kebha"><img src="img/bubu-ruffle.webp" width="320" height="320" alt="Cream bubu gown with red ruffle trim" loading="lazy" decoding="async"></button>
+        <div class="bd"><h3>Bubu and Mariama Kebha</h3><p data-kri="Bubu gawn ɛn shɔt">Bubu gowns and shirts</p>
+          <div class="ft"><p class="price ask" data-kri="Ɔmɔs? Aks wi">Price on request</p>
+          <a class="order" data-wa data-item="Bubu and Mariama Kebha" href="https://wa.me/23278452324?text=Hello%20Relyn%E2%80%99s%20Wear%2C%20I%20would%20like%20to%20order%3A%20Bubu%20and%20Mariama%20Kebha"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><use href="#ic-wa"/></svg><span data-kri="Aks di pris">Ask price</span></a></div></div>
+      </li>
+      <li class="item">
+        <button class="ph" type="button" aria-label="See bigger photo: Two-piece casuals"><img src="img/casual-two-piece.webp" width="320" height="320" alt="Red patterned two-piece trouser casual outfit" loading="lazy" decoding="async"></button>
+        <div class="bd"><h3>Two-piece casuals</h3><p data-kri="Trɔsis ɛn tɔp">Trousers and top sets</p>
+          <div class="ft"><p class="price ask" data-kri="Ɔmɔs? Aks wi">Price on request</p>
+          <a class="order" data-wa data-item="Two-piece casual" href="https://wa.me/23278452324?text=Hello%20Relyn%E2%80%99s%20Wear%2C%20I%20would%20like%20to%20order%3A%20Two-piece%20casual"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><use href="#ic-wa"/></svg><span data-kri="Aks di pris">Ask price</span></a></div></div>
+      </li>
+    </ul>
+    <p class="note" data-kri="Ɔl di pris dɛn na Nyu Liɔn (SLE). Di pris kin chenj bay di stayl ɛn di klos. Tap foto fɔ si am big.">All prices in new Leones (SLE). Final price depends on your style and fabric. Tap a photo to see it bigger.</p>
+  </section>
+
+  <section aria-labelledby="h-how">
+    <h2 id="h-how" data-kri="Aw fɔ <em>oda</em>">How to <em>order</em></h2>
+    <span class="h2k" lang="kri" data-kri="How to order" data-flip>Aw fɔ oda</span>
+    <ol class="steps">
+      <li><div><b data-kri="Pik yu stayl">Pick your style</b><span data-kri="Pik wan frɔm ya, ɔ sɛn wi foto pan WhatsApp.">Choose one above, or send us any photo on WhatsApp.</span></div></li>
+      <li><div><b data-kri="Wi tek yu mɛzhɔ">Get measured</b><span data-kri="Kam na di shɔp, ɔ sɛn yu mɛzhɔ pan WhatsApp.">Come to the shop, or send your measurements on WhatsApp.</span></div></li>
+      <li><div><b data-kri="Pe">Pay</b><span data-kri="Orange Money ɔ kɛsh. Wi go tɛl yu di pris fɔs.">Orange Money or cash. We agree the price with you first.</span></div></li>
+      <li><div><b data-kri="Tek yu klos">Collect</b><span data-kri="Kam tek am na di shɔp, ɔ aks wi bɔt dilivri.">Pick up at the shop, or ask us about delivery.</span></div></li>
+    </ol>
+  </section>
+
+  <section aria-labelledby="h-hrs">
+    <h2 id="h-hrs" data-kri="Di tɛm we wi de <em>opin</em>">Opening <em>hours</em></h2>
+    <span class="h2k" lang="kri" data-kri="Opening hours" data-flip>Di tɛm we wi de opin</span>
+    <!-- EDIT: hours. Keep the JS "H" list at the bottom in sync. -->
+    <div class="card"><table id="hrs">
+      <caption class="sr">Opening hours, Sierra Leone time (GMT)</caption>
+      <tr><th scope="row" data-kri="Mɔnde">Monday</th><td>9 am to 6 pm</td></tr>
+      <tr><th scope="row" data-kri="Tyuzde">Tuesday</th><td>9 am to 5 pm</td></tr>
+      <tr><th scope="row" data-kri="Wɛnzde">Wednesday</th><td>9 am to 6 pm</td></tr>
+      <tr><th scope="row" data-kri="Tɔzde">Thursday</th><td>9 am to 4 pm</td></tr>
+      <tr><th scope="row" data-kri="Fraide">Friday</th><td>9 am to 6 pm</td></tr>
+      <tr><th scope="row" data-kri="Satide">Saturday</th><td>12 pm to 4 pm</td></tr>
+      <tr><th scope="row" data-kri="Sɔnde">Sunday</th><td class="closed" data-kri="Wi lɔk">Closed</td></tr>
+    </table></div>
+  </section>
+
+  <section aria-labelledby="h-loc">
+    <h2 id="h-loc" data-kri="Usai fɔ <em>fɛn wi</em>">Where to <em>find us</em></h2>
+    <span class="h2k" lang="kri" data-kri="Where to find us" data-flip>Usai fɔ fɛn wi</span>
+    <div class="card">
+      <!-- EDIT: landmark-first directions -->
+      <p class="landmark" data-kri="Nia <em>Zion Academy Junior Secondary School</em>, Gɔdrich. Na lɛk 100 mita frɔm di skul.">A short walk (about 100 m) from <em>Zion Academy Junior Secondary School</em>, Goderich.</p>
+      <div class="map" aria-hidden="true">
+        <svg viewBox="0 0 320 120"><path d="M0 92 C80 80 140 98 200 70 S300 40 320 44" stroke="#3a2550" stroke-width="14" fill="none" stroke-linecap="round"/><path d="M78 30 L186 80" stroke="#d8b871" stroke-width="3" stroke-dasharray="2 8" stroke-linecap="round" fill="none"/>
+          <rect x="34" y="12" width="88" height="34" rx="8" fill="#2a1838" stroke="#6b5a80"/><text x="78" y="34" text-anchor="middle" fill="#e9e0f2" font-size="12" font-family="system-ui,sans-serif" font-weight="700">Zion Academy</text>
+          <circle cx="196" cy="86" r="16" fill="#d8b871"/><circle cx="196" cy="86" r="6" fill="#0d0712"/><text x="218" y="90" fill="#f1dca6" font-size="13" font-family="system-ui,sans-serif" font-weight="800">Relyn’s Wear</text>
+          <text x="128" y="50" fill="#c9bfd2" font-size="11" font-family="system-ui,sans-serif">~100 m</text></svg>
+      </div>
+      <p class="addr"><b>17 Macueley Street, Fonima, Femiturner, Goderich</b><br><span data-kri="Plɔs kod">Plus Code</span>: CPJH+PV Freetown</p>
+      <p class="tip" data-kri="Tɛl yu okada ɔ keke draiva: <b>“Zion Academy, Gɔdrich.”</b> If yu lɔs, kɔl wi ɔ WhatsApp wi, wi go gayd yu.">Tell your okada or keke rider: <b>“Zion Academy, Goderich.”</b> Lost? Call or WhatsApp us and we will guide you in.</p>
+      <div class="row2">
+        <a class="btn call" href="https://www.google.com/maps/dir/?api=1&amp;destination=8.431789,-13.270315" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-pin"/></svg><span data-kri="Si di rod">Directions</span></a>
+        <a class="btn ghost" data-wa data-msg="loc" href="https://wa.me/23278452324?text=Hello%20Relyn%E2%80%99s%20Wear%2C%20please%20guide%20me%20to%20your%20shop."><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-wa"/></svg><span data-kri="Gayd mi">Guide me</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="pay" aria-labelledby="h-pay">
+    <h2 id="h-pay" data-kri="Aw yu go <em>pe</em>">How to <em>pay</em></h2>
+    <span class="h2k" lang="kri" data-kri="How to pay" data-flip>Aw yu go pe</span>
+    <!-- EDIT: payment numbers. Afrimoney: copy this card, use *161# style code for your network. -->
+    <div class="card pay-card">
+      <div class="pay-head"><span class="pay-logo om" aria-hidden="true">OM</span><div><h3>Orange Money</h3><p data-kri="Sɛn to dis nɔmba">Send to this number</p></div></div>
+      <div class="num"><strong id="om-num">078 452 324</strong><button class="copy" type="button" data-copy="078452324" aria-label="Copy Orange Money number" data-kri="Kɔpi">Copy</button></div>
+      <ol class="how">
+        <li data-kri="Tap di batin dɔŋ ya ɔ dayal <b>#144#</b>">Tap the button below or dial <b>#144#</b></li>
+        <li data-kri="Pik <b>Money Transfer</b>, sɛn to <b>078 452 324</b>">Choose <b>Money Transfer</b>, send to <b>078 452 324</b></li>
+        <li data-kri="WhatsApp wi di mɛsej we yu gɛt">WhatsApp us your confirmation message</li>
+      </ol>
+      <div class="row2">
+        <a class="btn pay" href="tel:%23144%23" data-kri="Opin #144#">Open #144#</a>
+        <a class="btn wa" data-wa data-msg="paid" href="https://wa.me/23278452324?text=Hello%20Relyn%E2%80%99s%20Wear%2C%20I%20have%20paid%20by%20Orange%20Money."><span data-kri="A dɔn pe">I have paid</span></a>
+      </div>
+    </div>
+    <div class="card pay-card">
+      <div class="pay-head"><span class="pay-logo cash" aria-hidden="true">Le</span><div><h3 data-kri="Kɛsh">Cash</h3><p data-kri="Pe we yu kam tek yu klos, ɔ we wi dilivri am.">Pay when you collect, or on delivery.</p></div></div>
+    </div>
+  </section>
+
+  <section class="share" aria-labelledby="h-share">
+    <h2 id="h-share" data-kri="Tɛl yu padi dɛn">Tell a friend</h2>
+    <p data-kri="Sheb dis pej pan WhatsApp, ɔ sev wi nɔmba na yu fon.">Share this page on WhatsApp, or save our number to your phone.</p>
+    <div class="row2">
+      <button class="btn wa" type="button" id="share"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-share"/></svg><span data-kri="Sheb">Share</span></button>
+      <a class="btn call" id="vcf" download="Relyns-Wear.vcf" href="data:text/vcard;charset=utf-8,BEGIN%3AVCARD%0AVERSION%3A3.0%0AFN%3ARelyn%E2%80%99s%20Wear%20(Tailor)%0ATEL%3BTYPE%3DCELL%3A%2B23278452324%0AADR%3A%3B%3B17%20Macueley%20Street%2C%20near%20Zion%20Academy%3BGoderich%3B%3B%3BSierra%20Leone%0AEND%3AVCARD"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-save"/></svg><span data-kri="Sev nɔmba">Save number</span></a>
+    </div>
+  </section>
+
+  <footer>
+    <p class="bye" lang="kri">Tɛnki fɔ kam. Kam bak igen!</p>
+    <p>Relyn’s Wear, Goderich, Sierra Leone. <a href="https://instagram.com/relynswear" target="_blank" rel="noopener">Instagram @relynswear</a> · Facebook: Relyn’s Wear</p>
+    <p data-kri="Foto dɛn frɔm Relyn’s Wear in katalog. Nɔ wɛb font, nɔ trakas.">Photos from the Relyn’s Wear catalogue. Icons drawn for this page. No web fonts, no trackers.</p>
+  </footer>
+</main>
+
+<nav class="bar" id="bar" aria-label="Quick contact">
+  <a class="btn call" href="tel:+23278452324"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-call"/></svg><span data-kri="Kɔl">Call</span></a>
+  <a class="btn wa" data-wa href="https://wa.me/23278452324?text=Hello%20Relyn%E2%80%99s%20Wear%2C%20I%20would%20like%20to%20order%20a%20design."><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-wa"/></svg>WhatsApp</a>
+  <a class="btn pay" href="#pay"><span data-kri="Pe">Pay</span></a>
+</nav>
+
+<dialog id="lb" aria-labelledby="lb-t">
+  <button class="x" type="button" id="lb-x" aria-label="Close">×</button>
+  <img id="lb-img" src="data:," alt="" width="320" height="320">
+  <div class="bd"><h3 id="lb-t"></h3><p id="lb-p"></p><a class="btn wa" id="lb-o" href="#"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-wa"/></svg><span data-kri="Oda pan WhatsApp">Order on WhatsApp</span></a></div>
+</dialog>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="ic-wa" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s1 2.6 1.1 2.7c.1.2 1.9 2.9 4.6 4 1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.5-.3Z"/></symbol>
+  <symbol id="ic-call" viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2Z"/></symbol>
+  <symbol id="ic-pin" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></symbol>
+  <symbol id="ic-share" viewBox="0 0 24 24"><path d="M18 16a3 3 0 0 0-2.4 1.2l-6.7-3.4a3 3 0 0 0 0-1.6l6.7-3.4A3 3 0 1 0 15 7l-6.7 3.4a3 3 0 1 0 0 3.2L15 17a3 3 0 1 0 3-1Z"/></symbol>
+  <symbol id="ic-save" viewBox="0 0 24 24"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm0 2c-3.3 0-8 1.7-8 5v1h11v-2h2v-2h2v-.4c-1.8-.9-4.5-1.6-7-1.6Zm7 0v2h2v2h-2v2h-2v-2h-2v-2h2v-2h2Z"/></symbol>
+</svg>
+
+<script>
+(function(){
+  "use strict";
+  /* EDIT: hours in 24h, index 0 = Sunday. null = closed. Sierra Leone is GMT all year, so UTC is local time. */
+  var H=[null,[9,18],[9,17],[9,18],[9,16],[9,18],[12,16]];
+  var WA="23278452324", BIZ="Relyn’s Wear";
+  var T={
+    en:{open:"Open now",closed:"Closed now",closes:"closes at ",opens:"opens at ",today:"today",tomorrow:"tomorrow",
+        days:["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],tag:"Today",copied:"Copied",copy:"Copy",
+        hi:"Hello "+BIZ+", ",order:"I would like to order: ",gen:"I would like to order a design.",loc:"please guide me to your shop.",paid:"I have paid by Orange Money.",book:"I want to book a design.",
+        share:BIZ+", bespoke tailor in Goderich. Order on WhatsApp: "},
+    kri:{open:"Wi opin naw",closed:"Wi lɔk naw",closes:"wi de lɔk ",opens:"wi go opin ",today:"tide",tomorrow:"tumara",
+        days:["Sɔnde","Mɔnde","Tyuzde","Wɛnzde","Tɔzde","Fraide","Satide"],tag:"Tide",copied:"A dɔn kɔpi am",copy:"Kɔpi",
+        hi:"Kushɛ "+BIZ+", ",order:"a want fɔ oda: ",gen:"a want fɔ oda wan stayl.",loc:"duya gayd mi kam na yu shɔp.",paid:"a dɔn pe wit Orange Money.",book:"a want fɔ buk wan stayl.",
+        share:BIZ+", tela na Gɔdrich. Oda pan WhatsApp: "}
+  };
+  var lang="en", $=function(id){return document.getElementById(id)};
+  function t12(h){return (h>12?h-12:h)+(h<12?" am":" pm")}
+
+  function status(){
+    var n=new Date(),d=n.getUTCDay(),h=n.getUTCHours()+n.getUTCMinutes()/60,L=T[lang],o=H[d],txt,cls,i,k;
+    if(o&&h>=o[0]&&h<o[1]){cls="on";txt=L.open+" · "+L.closes+t12(o[1])}
+    else{cls="off";
+      if(o&&h<o[0])txt=L.closed+" · "+L.opens+t12(o[0])+" "+L.today;
+      else for(i=1;i<8;i++){k=(d+i)%7;if(H[k]){txt=L.closed+" · "+L.opens+(i===1?L.tomorrow:L.days[k])+" "+t12(H[k][0]);break}}}
+    $("status").className="status "+cls;$("status-t").textContent=txt;
+    var rows=$("hrs").rows;for(i=0;i<rows.length;i++){rows[i].className="";rows[i].cells[0].removeAttribute("data-today")}
+    var r=rows[(d+6)%7];r.className="today";r.cells[0].setAttribute("data-today",L.tag);
+  }
+
+  function wa(msg){return "https://wa.me/"+WA+"?text="+encodeURIComponent(T[lang].hi+msg)}
+  function links(){
+    var L=T[lang];
+    document.querySelectorAll("[data-wa]").forEach(function(a){
+      var it=a.getAttribute("data-item"),m=a.getAttribute("data-msg");
+      a.href=wa(it?L.order+it:m?L[m]:L.gen);
+    });
+  }
+
+  var KR=document.querySelectorAll("[data-kri]");
+  function setLang(l){
+    lang=l;
+    KR.forEach(function(el){
+      if(el.dataset.en===undefined)el.dataset.en=el.innerHTML;
+      el.innerHTML=l==="kri"?el.dataset.kri:el.dataset.en;
+      if(el.hasAttribute("data-flip"))el.lang=l==="kri"?"en":"kri";
+      else el.lang=l==="kri"?"kri":"";
+    });
+    document.documentElement.lang=l==="kri"?"kri":"en";
+    $("l-en").setAttribute("aria-pressed",l==="en");$("l-kri").setAttribute("aria-pressed",l==="kri");
+    try{localStorage.setItem("lang",l)}catch(e){}
+    status();links();
+  }
+  $("l-en").onclick=function(){setLang("en")};
+  $("l-kri").onclick=function(){setLang("kri")};
+  var start="en";try{start=localStorage.getItem("lang")||start}catch(e){}
+  if(/[?&]lang=kri/.test(location.search))start="kri";
+  setLang(start);
+  setInterval(status,60000);
+
+  /* copy payment number */
+  document.querySelectorAll("[data-copy]").forEach(function(b){
+    b.addEventListener("click",function(){
+      var v=b.getAttribute("data-copy"),done=function(){b.textContent=T[lang].copied;setTimeout(function(){b.textContent=T[lang].copy},2000)};
+      if(navigator.clipboard)navigator.clipboard.writeText(v).then(done,function(){prompt("",v)});
+      else{prompt("",v)}
+    });
+  });
+
+  /* photo lightbox */
+  var lb=$("lb"),last;
+  document.querySelectorAll(".item .ph").forEach(function(b){
+    b.addEventListener("click",function(){
+      var it=b.closest(".item"),img=b.querySelector("img");
+      if(!lb.showModal){window.open(img.src);return}
+      last=b;$("lb-img").src=img.src;$("lb-img").alt=img.alt;
+      $("lb-t").textContent=it.querySelector("h3").textContent;
+      $("lb-p").textContent=it.querySelector(".price").textContent.replace(/^(From|Price|Frɔm|Pris)/,"$1 ");
+      $("lb-o").href=it.querySelector(".order").href;
+      lb.showModal();
+    });
+  });
+  $("lb-x").onclick=function(){lb.close()};
+  lb.addEventListener("click",function(e){if(e.target===lb)lb.close()});
+  lb.addEventListener("close",function(){if(last)last.focus()});
+
+  /* share: native share sheet, else WhatsApp */
+  $("share").addEventListener("click",function(){
+    var u=location.href.split("#")[0],txt=T[lang].share;
+    if(navigator.share)navigator.share({title:BIZ,text:txt,url:u}).catch(function(){});
+    else location.href="https://wa.me/?text="+encodeURIComponent(txt+u);
+  });
+
+  /* hide sticky bar while hero buttons are on screen */
+  var bar=$("bar");
+  if("IntersectionObserver" in window)new IntersectionObserver(function(e){bar.classList.toggle("hide",e[0].isIntersecting)}).observe($("hero-cta"));
+
+  /* offline support after first visit */
+  if("serviceWorker" in navigator&&location.protocol==="https:")addEventListener("load",function(){navigator.serviceWorker.register("sw.js")});
+})();
+</script>
+</body>
+</html>
