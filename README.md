@@ -43,3 +43,8 @@ axe-core: 0 violations in English and Krio modes.
 - Product and gallery photos and logo: supplied by Relyn’s Wear (used with the owner’s permission). Logo traced to SVG for this page.
 - Icons: drawn for this page.
 - Fonts: the phone’s own system font (Roboto on most Android phones), so nothing is downloaded.
+
+## Links
+
+- Live page: https://relynswear.github.io/
+- Source code: https://github.com/relynswear/relynswear.github.io
