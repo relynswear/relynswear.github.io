@@ -329,9 +329,9 @@ dialog .stage img{aspect-ratio:auto;max-height:66vh;width:100%;object-fit:contai
   </section>
 
   <section id="gallery" aria-labelledby="h-gal">
-    <h2 id="h-gal" data-kri="Stayl <em>aydia</em> dɛn">Style <em>ideas</em></h2>
-    <span class="h2k" lang="kri" data-kri="Style ideas" data-flip>Stayl aydia dɛn</span>
-    <p class="lede" style="margin:0 0 12px" data-kri="Dɛn foto ya na aydia frɔm sohshal midia, nɔto wi yon wok. Pik wan, ɛn wi go sɔw am to yu mɛzhɔ, wit di klos we yu want.">These are inspiration photos from social media, not our own work. Pick one and we will sew it to your measurements, in the fabric you choose.</p>
+    <h2 id="h-gal" data-kri="Briŋ yu <em>dizayn</em>">Bring your <em>design</em></h2>
+    <span class="h2k" lang="kri" data-kri="Bring your design" data-flip>Briŋ yu dizayn</span>
+    <p class="lede" style="margin:0 0 12px" data-kri="If yu gɛt dizayn, briŋ am, wi go mek am fɔ yu. Relyn dɔn sɔw stayl lɛk dɛn wan ya fɔ in kɔstɔma dɛn, to dɛn mɛzhɔ ɛn wit di klos we dɛn pik. (Di foto dɛn kɔmɔt na sohshal midia.)">If you have a design, bring it and we will make it for you. Relyn has recreated styles like these for her customers, sewn to their measurements in the fabric they chose. (Reference photos from social media.)</p>
     <p class="hint" data-kri="🔍 Tap eni foto fɔ si am ful. Swayp fɔ si di nɛks wan.">🔍 Tap any photo to see it full size. Swipe for the next one.</p>
     <!-- EDIT: gallery. Thumbnail img/g/NN-t.webp (210x280), full size img/g/NN.webp. -->
     <ul class="gal">
@@ -534,9 +534,9 @@ dialog .stage img{aspect-ratio:auto;max-height:66vh;width:100%;object-fit:contai
   function showGal(i){
     idx=(i+gal.length)%gal.length;var b=gal[idx],th=b.querySelector("img"),im=$("lb-img"),full=b.getAttribute("data-full");
     im.src=th.src;im.alt=th.alt;var hi=new Image();hi.onload=function(){if(gal[idx]===b)im.src=full};hi.src=full;
-    $("lb-t").textContent=(lang==="kri"?"Stayl aydia #":"Style idea #")+(idx+1);$("lb-p").textContent=th.alt;
+    $("lb-t").textContent=(lang==="kri"?"Dizayn #":"Design #")+(idx+1);$("lb-p").textContent=th.alt;
     $("lb-c").textContent=(idx+1)+" / "+gal.length;$("lb-ol").textContent=lang==="kri"?"Oda dis stayl":"Order this style";
-    $("lb-o").href=wa((lang==="kri"?"a lɛk stayl aydia #":"I like style idea #")+(idx+1)+(lang==="kri"?" frɔm yu gallery.":" from your gallery."));
+    $("lb-o").href=wa((lang==="kri"?"a want mek yu sɔw dizayn #":"I want you to sew design #")+(idx+1)+(lang==="kri"?" frɔm yu wɛbsayt fɔ mi.":" from your website for me."));
   }
   gal.forEach(function(b,i){b.addEventListener("click",function(){
     if(!lb.showModal){window.open(b.getAttribute("data-full"));return}
