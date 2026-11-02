@@ -1,52 +1,48 @@
-# Relyn’s Wear: mobile landing page
+# Relyn's Wear website
 
-A fast, mobile-first landing page for **Relyn’s Wear**, a bespoke tailor in Goderich, Freetown, Sierra Leone.
-Plain HTML, CSS and a little vanilla JavaScript. No framework, no build step, no web fonts, no trackers.
-
-## Write-up
-
-Relyn’s Wear is a bespoke tailor in Goderich, Freetown, serving women, men and kids who want Ankara, lace, bubu and casual outfits sewn to their own measurements at a fair price. The page keeps the shop’s own black, plum and gold brand and puts the three questions customers usually ask on WhatsApp right at the top: is the shop open now, how much does it cost in Leones, and where is it, with directions anchored on Zion Academy Junior Secondary School and a line to tell the okada or keke rider. Every product has a one-tap WhatsApp order with the item name already written in, the Orange Money button dials #144# directly, and one tap switches the whole page into Krio. To stay fast on Salone 3G it uses no framework and no web fonts, a hand-traced vector logo inlined in the HTML, and ten lazy-loaded WebP photos, so a first visit is under 250 KB with every thumbnail and the first screen paints from a 17 KB file; a small service worker keeps the page working offline after the first visit.
-
-## Results (Lighthouse 12, mobile, measured 30 October 2026)
-
-| Test | Performance | Accessibility | Best practices | SEO |
-|---|---|---|---|---|
-| Default mobile (slow 4G) | 96 to 99 | 100 | 100 | 100 |
-| Custom 3G (700 kbps, 300 ms RTT, 4x CPU slowdown) | 89 | 100 | 100 | 100 |
-
-3G profile: First Contentful Paint 1.6 s, Largest Contentful Paint 2.7 s. Total page weight 248 KB including every thumbnail; full-size gallery photos load only when tapped.
-axe-core: 0 violations in English and Krio modes.
-
-## What is on the page
-
-- Business name, tagline, live “Open now / Closed” status in Sierra Leone time (GMT)
-- 10 products with photos and prices in SLE, each with a one-tap WhatsApp order
-- “Bring your design” gallery of styles Relyn has recreated for customers (reference photos from social media, labelled on the page): tap any photo to open it full size, swipe or use arrows, and order that style by number on WhatsApp (full-size photos load only when tapped)
-- How to order in 4 steps
-- Opening hours with today highlighted
-- Landmark-first location, Plus Code, Google Maps directions, “Guide me” on WhatsApp
-- Orange Money (the Pay button dials #144# in one tap, copy number, “I have paid” message) and cash
-- Instagram, Facebook and email links
-- Share on WhatsApp and Save number (vCard) for word-of-mouth
-- Full English / Krio switch, remembered on the phone, with `lang="kri"` for screen readers
-- Sticky Call / WhatsApp / Pay bar
-
-## Reuse it for your business
-
-1. Open `index.html` and search for `EDIT:`. Change the name, tagline, phone numbers, products, hours, landmark and payment numbers.
-2. Replace the photos in `img/` with your own (320 x 320 WebP, under 20 KB each works well).
-3. Update the hours list `H` in the script at the bottom, and the file list in `sw.js`.
-4. Upload the folder to Netlify, Vercel or GitHub Pages.
-
-## Credits
-
-- Design and build: James Emmanuel Paul Yambasu (https://james-yambasu-portfolio-1.vercel.app/).
-- Product photos (“What we sew”) and logo: supplied by Relyn’s Wear, used with the owner’s permission. Logo traced to SVG for this page.
-- “Bring your design” photos: reference images shared on social media, showing styles Relyn has recreated for customers. Rights in the photos belong to their owners; any owner can ask for removal.
-- Icons: drawn for this page.
-- Fonts: the phone’s own system font (Roboto on most Android phones), so nothing is downloaded.
-
-## Links
+This is the website for Relyn's Wear, a tailor in Goderich, Freetown. It's a single HTML page with a bit of plain JavaScript. There's no framework, no build step and no web font to download, so it opens quickly on a cheap Android phone.
 
 - Live page: https://relynswear.github.io/
 - Source code: https://github.com/relynswear/relynswear.github.io
+
+## Write-up
+
+Relyn's Wear is a tailor in Goderich who sews Ankara, lace, bubu and casual outfits to measure for women, men and kids. The page answers what a customer wants to know first: is she open, what does it cost in Leones, and where is the shop. The directions start from Zion Academy Junior Secondary School, which is what you'd actually tell an okada rider. Every style has an order button that opens WhatsApp with the style already named, the Pay button dials the Orange Money menu (#144#), and one tap switches the whole page to Krio. I kept it light for Salone 3G with a hand-traced SVG logo and small WebP photos that load as you scroll, so the first screen comes from a 17 KB file and a full visit stays under 250 KB.
+
+## Test results
+
+Lighthouse 12, mobile, measured on 30 October 2026:
+
+| Test | Performance | Accessibility | Best practices | SEO |
+|---|---|---|---|---|
+| Standard mobile (slow 4G) | 96 to 99 | 100 | 100 | 100 |
+| Harsh 3G (700 kbps, 300 ms delay, 4x slower CPU) | 89 | 100 | 100 | 100 |
+
+On the 3G test the first text appears after 1.6 s and the main photo after 2.7 s. The page weighs 248 KB with every thumbnail, and full-size photos only download when someone taps one. The axe accessibility checker finds no problems in English or in Krio.
+
+## What's on the page
+
+- The name, tagline and a live sign saying whether the shop is open right now (Sierra Leone time)
+- 10 styles with photos and prices in Leones, each with its own WhatsApp order button
+- A "Bring your design" gallery of styles Relyn has recreated for customers. The photos come from social media and the page says so. Tap one to see it full size, swipe through the rest, and order by number.
+- Four steps for ordering, and the opening hours with today highlighted
+- Directions from the nearest landmark, a Plus Code, a Google Maps link and a "Guide me" button
+- Orange Money (copy the number, or tap to dial #144#) and cash
+- Instagram, Facebook and email
+- Buttons to share the page and to save the shop's number to your phone
+- An English and Krio switch that the phone remembers. Krio text is marked `lang="kri"` for screen readers.
+- A Call, WhatsApp and Pay bar that stays at the bottom of the screen
+
+## Using it for another business
+
+1. Open `index.html` and search for `EDIT:`. That's where the name, tagline, numbers, products, hours, landmark and payment details live.
+2. Swap the photos in `img/` for your own. 320 x 320 WebP files under 20 KB each work well.
+3. Change the hours list `H` in the script near the bottom, and the file list in `sw.js`.
+4. Upload the folder to GitHub Pages, Netlify or Vercel.
+
+## Credits
+
+- Design and build: James Emmanuel Paul Yambasu (https://james-yambasu-portfolio-1.vercel.app/)
+- Product photos in "What we sew" and the logo come from Relyn's Wear and are used with her permission. I traced the logo to SVG for this page.
+- The "Bring your design" photos were shared on social media and show styles Relyn has made for customers. The rights belong to whoever took them, and any owner can ask for a photo to be taken down.
+- I drew the icons for this page. The text uses the phone's own font (Roboto on most Android phones), so no font is downloaded.
