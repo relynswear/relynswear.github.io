@@ -40,7 +40,7 @@ axe-core: 0 violations in English and Krio modes.
 
 ## Credits
 
-- Design and build: James Yambasu (https://james-yambasu-portfolio-1.vercel.app/).
+- Design and build: James Emmanuel Paul Yambasu (https://james-yambasu-portfolio-1.vercel.app/).
 - Product photos (“What we sew”) and logo: supplied by Relyn’s Wear, used with the owner’s permission. Logo traced to SVG for this page.
 - “Bring your design” photos: reference images shared on social media, showing styles Relyn has recreated for customers. Rights in the photos belong to their owners; any owner can ask for removal.
 - Icons: drawn for this page.
